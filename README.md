@@ -6,4 +6,7 @@ Tässä projektissa aion tehdä **yksinkertaista sovellusta**, jonka tarkoitus o
 
 Laskarit-alihakemisto: [Laskarit](laskarit)
 
-[Vaatimusmäärittely](dokumentaatio/vaatimusmaarittely.md)
+## Dokumentaatio
+
+[Vaatimusmäärittely](dokumentaatio/vaatimusmaarittely.md)<br>
+[Työaikakirjanpito](dokumentaatio/tuntikirjanpito.md)

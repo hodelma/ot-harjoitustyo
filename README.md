@@ -5,3 +5,5 @@ Tässä projektissa aion tehdä **yksinkertaista sovellusta**, jonka tarkoitus o
 
 
 Laskarit-alihakemisto: [Laskarit](laskarit)
+
+[Vaatimusmäärittely](dokumentaatio/vaatimusmaarittely.md)

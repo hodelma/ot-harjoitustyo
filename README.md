@@ -1,6 +1,6 @@
-# Ohjelmistotekniikka, harjoitustyö
+# Kolikkokerääjä -peli
 
-Tässä projektissa aion tehdä **yksinkertaista sovellusta**, jonka tarkoitus on harjoitella *ohjelmistotekniikan kurssin* työskentelytapoja ja periaatteita.
+Sovelluksen avulla pelaajan on mahdollista pelata kolikkopeliä, jossa tavoitteena on kerätä kolikoita ja välttää hirviöitä. Pelaaja saa pisteitä kerätyistä kolikoista, mutta törmätessä hirviöön pisteet nollautuvat. Peli päättyy, kun pelaaja saavuttaa voittoehdon keräämällä 20 kolikkoa tai törmää hirviöön.
 
 
 

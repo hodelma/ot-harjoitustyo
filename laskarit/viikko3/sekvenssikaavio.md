@@ -1,3 +1,4 @@
+```mermaid
 sequenceDiagram
     participant main
     participant laitehallinto
@@ -30,3 +31,4 @@ sequenceDiagram
 
     main->>bussi244: osta_lippu(kallen_kortti, 2)
     bussi244-->>main: False
+```

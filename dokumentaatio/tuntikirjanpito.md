@@ -4,15 +4,15 @@
 | 10.3. | 3 | Pelin idean kehittely ja pelimekaniikan suunnittelu |
 | 11.3. | 2 | Vaatimusmäärittelyn kirjoittamisen aloitus |
 | 12.3. | 2 | Vaatimusmäärittelyn jatkaminen |
-| 13.3. | 3 | pelin toiminnallisuuksien tarkentaminen |
-| 15.3. | 2 | käyttöliittymän suunnittelu (valikko, pelinäkymä, ikkunat) |
-| 16.3. | 2 | käyttöliittymäluonnosten tekeminen itseäni varten |
-| 17.3. | 2 | pelin rakenteen hahmottelu (mitä luokkia tarvitaan) |
-| 18.3. | 2 | pelilogiikan suunnittelu (pisteet, törmäykset, voittoehdot) |
-|       | 2 | jatkokehitysideoiden suunnittelu
-| 19.3. | 2 | dokumentaation viimeistely (vaatimusmäärittely) |
-| 20.3. | 1 | suunnitelman tarkennus ja ideointi |
-| 21.3. | 1 | dokumentaation muokkaus ja korjaukset |
-| 23.3. | 2 | projektin seuraavien vaiheiden suunnittelu |
-| 24.3. | 1 | projektin alustaminen |
+| 13.3. | 3 | Pelin toiminnallisuuksien tarkentaminen |
+| 15.3. | 2 | Käyttöliittymän suunnittelu (valikko, pelinäkymä, ikkunat) |
+| 16.3. | 2 | Käyttöliittymäluonnosten tekeminen itseäni varten |
+| 17.3. | 2 | Pelin rakenteen hahmottelu (mitä luokkia tarvitaan) |
+| 18.3. | 2 | Pelilogiikan suunnittelu (pisteet, törmäykset, voittoehdot) |
+|       | 2 | Jatkokehitysideoiden suunnittelu
+| 19.3. | 2 | Dokumentaation viimeistely (vaatimusmäärittely) |
+| 20.3. | 1 | Suunnitelman tarkennus ja ideointi |
+| 21.3. | 1 | Dokumentaation muokkaus ja korjaukset |
+| 23.3. | 2 | Projektin seuraavien vaiheiden suunnittelu |
+| 24.3. | 1 | Projektin alustaminen |
 | yht | 29 | |

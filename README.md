@@ -7,3 +7,6 @@ Sovelluksen avulla pelaajan on mahdollista pelata kolikkopeliä, jossa tavoittee
 
 [Vaatimusmäärittely](dokumentaatio/vaatimusmaarittely.md)<br>
 [Työaikakirjanpito](dokumentaatio/tuntikirjanpito.md)
+
+>[!Important]
+>Sinulla täytyy olla Python 3.12. versio ladattuna etukäteen. Tutustu asennusohjeisiin [täältä](https://www.python.org/downloads/)

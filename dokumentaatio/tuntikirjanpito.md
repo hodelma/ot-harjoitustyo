@@ -1,4 +1,4 @@
-| Päivä | Käytetty aika | Mitä tein |
+| Päivä | Käytetty aika (h) | Mitä tein |
 |------|------|----------|
 | 9.3. | 2 | Kurssiin tutustuminen ja projektin ideointi |
 | 10.3. | 3 | Pelin idean kehittely ja pelimekaniikan suunnittelu |
@@ -15,4 +15,7 @@
 | 21.3. | 1 | Dokumentaation muokkaus ja korjaukset |
 | 23.3. | 2 | Projektin seuraavien vaiheiden suunnittelu |
 | 24.3. | 1 | Projektin alustaminen |
-| yht | 29 | |
+| 26.3. | 2 | Ensimmäisten toiminnallisuuksien kehittäminen |
+| 27.3. | 2.5 | Testien tekeminen |
+|       | 0.5 | Dokumentaation ylläpito/checkaus
+| **Yhteensä** | 34 | |

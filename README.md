@@ -6,7 +6,8 @@ Sovelluksen avulla pelaajan on mahdollista pelata kolikkopeliä, jossa tavoittee
 ## Dokumentaatio
 
 [Vaatimusmäärittely](dokumentaatio/vaatimusmaarittely.md)<br>
-[Työaikakirjanpito](dokumentaatio/tuntikirjanpito.md)
+[Työaikakirjanpito](dokumentaatio/tuntikirjanpito.md)<br>
+[Changelog](coin-collecter-app/dokumentaatio/changelog.md)
 
 >[!Important]
 >Sinulla täytyy olla Python 3.12. versio ladattuna etukäteen. Tutustu asennusohjeisiin [täältä](https://www.python.org/downloads/)

@@ -58,7 +58,8 @@ poetry run invoke coverage
 ```
 
 
-### Testikattavuusraportin generointi
+### Testikattavuusraportti
 ```bash
 poetry run invoke coverage-report
-``` 
+```
+Coverage raportti generoituu *htmlcov*-hakemistoon

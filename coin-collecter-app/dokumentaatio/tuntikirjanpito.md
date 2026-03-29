@@ -20,5 +20,6 @@
 |       | 0.5 | Dokumentaation ylläpito/checkaus |
 | 29.3. | 2 | Projektin asetusten konffausta |
 |       | 0.5 | Alustavan changelogin kirjoittelua |
-|       | 2.5 | Tietokanta-alustusta ja konffausta sekä fixailua
-| **Yhteensä** | 39 | |
+|       | 2.5 | Tietokanta-alustusta ja konffausta sekä fixailua |
+|       | 0.5 | Dokumentaation päivittelyä ja muokkausta
+| **Yhteensä** | 39.5 | |

@@ -27,7 +27,7 @@ poetry install --no-root
 >
 >Luo projektin juureen tiedosto nimeltä .env
 >
->Lisää tiedostoon rivi ja haluamasi tiedostonimi ```DATABASE_FILENAME="OMA_TIEDOSTO_NIMI.db"```
+>Lisää tiedostoon rivi haluamallasi tiedostonimellä ```DATABASE_FILENAME="OMA_TIEDOSTO_NIMI.db"```
 
 
 **2. Suorita tarvittavat alustustoimenpiteet:**

@@ -20,7 +20,7 @@ Sovelluksen avulla pelaajan on mahdollista pelata kolikkopeliä, jossa tavoittee
 
 **1. Asenna projektin riippuvuudet:**
 ```bash
-poetry install --no-root
+poetry install
 ```
 
 

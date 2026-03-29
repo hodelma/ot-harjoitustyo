@@ -23,12 +23,12 @@ poetry install --no-root
 2. *Alustustoimenpiteet (päivittyy myöhemmin)*
 
 
-3. Käynnistä sovellus:
+3. Käynnistä sovellus (sovellus ei ns. avaudu, koska ei ole käyttöliittymää vielä):
 ```bash
 poetry run invoke start
 ```
 
-## Käytössä olevat komennot:
+## Käytössä olevat komennot
 
 ### Sovelluksen testaaminen
 ```bash

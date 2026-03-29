@@ -17,5 +17,7 @@
 | 24.3. | 1 | Projektin alustaminen |
 | 26.3. | 2 | Ensimmäisten toiminnallisuuksien kehittäminen |
 | 27.3. | 2.5 | Testien tekeminen |
-|       | 0.5 | Dokumentaation ylläpito/checkaus
-| **Yhteensä** | 34 | |
+|       | 0.5 | Dokumentaation ylläpito/checkaus |
+| 29.3. | 2 | Projektin asetusten konffausta |
+|       | 0.5 | Alustavan changelogin kirjoittelua
+| **Yhteensä** | 36.5 | |

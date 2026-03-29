@@ -5,3 +5,6 @@ htmlcov
 .vscode
 .venv
 venv
+.env
+.db
+*.db

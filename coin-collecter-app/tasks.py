@@ -2,11 +2,15 @@ from invoke import task
 
 @task
 def start(ctx):
-    ctx.run("python src/index.py", pty=True)
+    ctx.run("python3 src/index.py", pty=True)
 
 @task
 def test(ctx):
     ctx.run("pytest src/tests", pty=True)
+
+@task
+def build(ctx):
+    ctx.run("python3 src/build.py", pty=True)
 
 @task
 def coverage(ctx):

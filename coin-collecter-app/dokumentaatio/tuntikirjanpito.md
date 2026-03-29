@@ -19,5 +19,6 @@
 | 27.3. | 2.5 | Testien tekeminen |
 |       | 0.5 | Dokumentaation ylläpito/checkaus |
 | 29.3. | 2 | Projektin asetusten konffausta |
-|       | 0.5 | Alustavan changelogin kirjoittelua
-| **Yhteensä** | 36.5 | |
+|       | 0.5 | Alustavan changelogin kirjoittelua |
+|       | 2.5 | Tietokanta-alustusta ja konffausta sekä fixailua
+| **Yhteensä** | 39 | |

@@ -1,4 +1,4 @@
-from src.db.initialize_database import initialize_database
+from db.initialize_database import initialize_database
 
 def build():
     initialize_database()

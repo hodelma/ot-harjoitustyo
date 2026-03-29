@@ -1,3 +1,5 @@
+# Projektin changelog
+
 ## Viikko 3
 
 - Implementoitu Game-pelilogiikka

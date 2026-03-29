@@ -5,8 +5,8 @@ Sovelluksen avulla pelaajan on mahdollista pelata kolikkopeliä, jossa tavoittee
 
 ## Dokumentaatio
 
-- [Vaatimusmäärittely](dokumentaatio/vaatimusmaarittely.md)<br>
-- [Työaikakirjanpito](dokumentaatio/tuntikirjanpito.md)<br>
+- [Vaatimusmäärittely](coin-collecter-app/dokumentaatio/vaatimusmaarittely.md)<br>
+- [Työaikakirjanpito](coin-collecter-app/dokumentaatio/tuntikirjanpito.md)<br>
 - [Changelog](coin-collecter-app/dokumentaatio/changelog.md)
 
 >[!Important]

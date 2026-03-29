@@ -5,9 +5,42 @@ Sovelluksen avulla pelaajan on mahdollista pelata kolikkopeliä, jossa tavoittee
 
 ## Dokumentaatio
 
-[Vaatimusmäärittely](dokumentaatio/vaatimusmaarittely.md)<br>
-[Työaikakirjanpito](dokumentaatio/tuntikirjanpito.md)<br>
-[Changelog](coin-collecter-app/dokumentaatio/changelog.md)
+- [Vaatimusmäärittely](dokumentaatio/vaatimusmaarittely.md)<br>
+- [Työaikakirjanpito](dokumentaatio/tuntikirjanpito.md)<br>
+- [Changelog](coin-collecter-app/dokumentaatio/changelog.md)
 
 >[!Important]
->Sinulla täytyy olla Python 3.12. versio ladattuna etukäteen. Tutustu asennusohjeisiin [täältä](https://www.python.org/downloads/)
+>Sinulla täytyy olla Python 3.12. versio ladattuna etukäteen — sovellus on toteutettu 3.12. versiolla. Tutustu asennusohjeisiin [täältä](https://www.python.org/downloads/)
+
+
+## Asennusohjeet
+
+1. Asenna projektin riippuvuudet:
+```bash
+poetry install --no-root
+```
+
+2. *Alustustoimenpiteet (päivittyy myöhemmin)*
+
+
+3. Käynnistä sovellus:
+```bash
+poetry run invoke start
+```
+
+## Käytössä olevat komennot:
+
+### Sovelluksen testaaminen
+```bash
+poetry run invoke test
+```
+
+### Testikattavuuden tarkistaminen coveragella
+```bash
+poetry run invoke coverage
+```
+
+### Testikattavuusraportin generointi
+```bash
+poetry run invoke coverage-report
+``` 

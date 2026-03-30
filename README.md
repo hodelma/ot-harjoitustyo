@@ -20,6 +20,7 @@ Pelaaja voi pelata kolikkopeliä, jossa tavoitteena on kerätä kolikoita ja vä
 
 **1. Asenna projektin riippuvuudet:**
 ```bash
+cd coin-collecter-app
 poetry install
 ```
 

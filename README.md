@@ -6,6 +6,7 @@ Pelaaja voi pelata kolikkopeliä, jossa tavoitteena on kerätä kolikoita ja vä
 ## Dokumentaatio
 
 - [Vaatimusmäärittely](coin-collecter-app/dokumentaatio/vaatimusmaarittely.md)<br>
+- [Arkkitehtuuri](coin-collecter-app/dokumentaatio/arkkitehtuuri.md)<br>
 - [Työaikakirjanpito](coin-collecter-app/dokumentaatio/tuntikirjanpito.md)<br>
 - [Changelog](coin-collecter-app/dokumentaatio/changelog.md)
 

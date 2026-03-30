@@ -18,10 +18,15 @@ Pelaaja voi pelata kolikkopeliä, jossa tavoitteena on kerätä kolikoita ja vä
 
 ## Asennusohjeet
 
-
-**1. Asenna projektin riippuvuudet:**
+**1. Kloonaa repositorio:**
 ```bash
+git clone https://github.com/hodelma/ot-harjoitustyo.git
 cd coin-collecter-app
+```
+
+
+**2. Asenna projektin riippuvuudet:**
+```bash
 poetry install
 ```
 
@@ -34,13 +39,13 @@ poetry install
 >Lisää tiedostoon rivi haluamallasi tiedostonimellä ```DATABASE_FILENAME="OMA_TIEDOSTO_NIMI.db"```
 
 
-**2. Suorita tarvittavat alustustoimenpiteet:**
+**3. Suorita tarvittavat alustustoimenpiteet:**
 ```bash
 poetry run invoke build
 ```
 
 
-**3. Käynnistä sovellus (sovellus ei varsinaisesti avaudu, koska ei ole käyttöliittymää vielä):**
+**4. Käynnistä sovellus (sovellus ei varsinaisesti avaudu, koska ei ole käyttöliittymää vielä):**
 ```bash
 poetry run invoke start
 ```
@@ -55,15 +60,16 @@ poetry run invoke start
 poetry run invoke test
 ```
 
-
-### Testikattavuuden tarkistaminen coveragella
-```bash
-poetry run invoke coverage
-```
-
-
 ### Testikattavuusraportti
 ```bash
 poetry run invoke coverage-report
 ```
 Coverage raportti generoituu *htmlcov*-hakemistoon
+
+
+### Pylint
+Tiedostossa .pylintrc määriteltyjen tarkistusten suoritus:
+```bash
+poetry run invoke lint
+```
+

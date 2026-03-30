@@ -21,5 +21,6 @@
 | 29.3. | 2 | Projektin asetusten konffausta |
 |       | 0.5 | Alustavan changelogin kirjoittelua |
 |       | 2.5 | Tietokanta-alustusta ja konffausta sekä fixailua |
-|       | 0.5 | Dokumentaation päivittelyä ja muokkausta
-| **Yhteensä** | 39.5 | |
+|       | 0.5 | Dokumentaation päivittelyä ja muokkausta |
+| 30.3. | 2.5 | Tkinterin setuppaus ja alustava window/UI manager |
+| **Yhteensä** | 42 | |

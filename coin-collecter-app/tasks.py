@@ -17,6 +17,11 @@ def build(ctx):
 
 
 @task
+def lint(ctx):
+    ctx.run("pylint src", pty=True)
+
+
+@task
 def coverage(ctx):
     ctx.run("coverage run --branch -m pytest src/tests", pty=True)
 

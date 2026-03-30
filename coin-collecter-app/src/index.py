@@ -6,6 +6,7 @@ def main():
     """sets up and launches the main app window"""
     window = Tk()
     window.title("Coin Collector Game")
+    window.geometry("1200x600")
 
     ui = UI(window)
     ui.start()

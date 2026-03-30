@@ -5,4 +5,4 @@
 - Implementoitu Game-pelilogiikka
 - Rakennettu testit pelilogiikka funktioille ja varmistettu pelimekaniikkojen toimivuus
 - Konfiguroitu tietokanta ja avattu SQLite-yhteys
-- Suunniteltu ja otettu käyttöön tietokannan alustustoiminnot
+- Tkinterillä toteutettu alustava UI ja ikkuna

@@ -45,7 +45,7 @@ poetry run invoke build
 ```
 
 
-**4. Käynnistä sovellus (sovellus ei varsinaisesti avaudu, koska ei ole käyttöliittymää vielä):**
+**4. Käynnistä sovellus (käyttöliittymä keskeneräinen):**
 ```bash
 poetry run invoke start
 ```

@@ -20,7 +20,7 @@ class Game:
     def has_won(self):
         """checks if the player has won the game"""
         return self.score >= 20
-    
+
     def reset(self):
         """resets the game state"""
         self.score = 0

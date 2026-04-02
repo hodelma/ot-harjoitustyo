@@ -25,4 +25,5 @@
 | 30.3. | 3 | Tkinterin setuppaus ja alustava window/UI manager |
 |       | 1 | Dokumentaation päivitystä ja projektin kirjastojen konffausta |
 | 31.3. | 2.5 | Sovelluslogiikan ja käyttöliittymän rakentamista |
-| **Yhteensä** | 46 | |
+| 1.4.  | 2 | Siirtyminen Tkinteristä kokonaan Pygameen |
+| **Yhteensä** | 48 | |

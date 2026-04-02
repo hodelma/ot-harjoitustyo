@@ -1,15 +1,28 @@
 class Game:
+    """manages the game state and logic"""
     def __init__(self):
         self.score = 0
+        self.is_over = False
+        self.won = False
 
     def collect_coin(self):
-        """increase score by one when a coin is collected"""
+        """increases score by one when a coin is collected"""
         self.score += 1
+        if self.has_won():
+            self.won = True
+            self.is_over = True
 
     def hit_monster(self):
-        """reset score when player hits a monster"""
+        """resets score when player hits a monster"""
         self.score = 0
+        self.is_over = True
 
     def has_won(self):
-        """check if the player has won the game"""
+        """checks if the player has won the game"""
         return self.score >= 20
+    
+    def reset(self):
+        """resets the game state"""
+        self.score = 0
+        self.is_over = False
+        self.won = False

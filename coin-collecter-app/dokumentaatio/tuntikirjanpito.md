@@ -27,4 +27,5 @@
 | 31.3. | 2.5 | Sovelluslogiikan ja käyttöliittymän rakentamista |
 | 1.4. | 2 | Siirtyminen Tkinteristä kokonaan Pygameen |
 | 2.4. | 2 | Koodin refaktorointia ja tutustumista materiaalin pygame ohjeisiin |
-| **Yhteensä** | 50 | |
+| 3.4. | 1 | Grafiikan ja hahmojen alustavaa koodausta |
+| **Yhteensä** | 51 | |

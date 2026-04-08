@@ -88,3 +88,18 @@ class Level:
         if monsters_hit:
             self.game.hit_monster()
 
+    def reset(self):
+        """resets the level"""
+        self.game.reset()
+        self.player.reset_position(1250 // 2, 700 // 2)
+
+        self.all_sprites.remove(self.coins)
+        self.coins.empty()
+
+        for _ in range(3):
+            coin = Coin()
+            self.all_sprites.add(coin)
+            self.coins.add(coin)
+
+        for monster in self.monsters:
+            monster.reset_position()

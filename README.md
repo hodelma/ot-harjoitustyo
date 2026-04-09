@@ -34,9 +34,9 @@ poetry install
 >[!TIP]
 >Jos haluat määritellä itse SQLite-tietokantatiedoston nimen, toimi seuraavasti:
 >
->Luo projektin juureen tiedosto nimeltä .env
+>Mene projektin juureen tiedostoon .env
 >
->Lisää tiedostoon rivi haluamallasi tiedostonimellä ```DATABASE_FILENAME="OMA_TIEDOSTO_NIMI.db"```
+>Muokkaa haluamasi tiedostonimi riville ```DATABASE_FILENAME="OMA_TIEDOSTO_NIMI.db"```
 
 
 **3. Suorita tarvittavat alustustoimenpiteet:**

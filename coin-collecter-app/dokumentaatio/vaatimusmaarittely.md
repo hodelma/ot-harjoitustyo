@@ -23,7 +23,7 @@ Pelin tavoitteena on kerätä kolikoita ja välttää hirviöitä. Pelaaja saa p
 - [x] Peli käynnissä ja hahmon ohjaus
 - [x] Game Over -näkymä - pelaaja häviää
 - [x] You Win -näkymä - pelaaja voittaa
-- [ ] Esc-näppäin avaa valikon, jossa vaihtoehdot:
+- [x] Esc-näppäin avaa valikon, jossa vaihtoehdot:
   - "Resume" jatkaa peliä
   - "Quit" palaa etusivulle tai sulkee pelin
 

@@ -10,8 +10,6 @@ Pelin tavoitteena on kerätä kolikoita ja välttää hirviöitä. Pelaaja saa p
 - [x] Kolikoiden kerääminen kasvattaa pistesaldoa
 - [x] Hirviöön osuminen johtaa pisteiden nollaamiseen ja pelin päättymiseen
 - [x] Pelin voittaminen: 20 kolikkoa kerätty, niin pelaaja voittaa
-- [x] Osumatarkistus: pelaaja vs. kolikko, pelaaja vs. hirviö
-- [x] Pelin tilan seuranta: pisteet, peli päättynyt/käynnissä, voitto
 - [ ] Eri pistearvot kolikoille
 - [ ] Graafisten tehosteiden ja animaatioiden lisääminen
 - [ ] Pelaaja ei kuole yhdestä törmäyksestä <br>

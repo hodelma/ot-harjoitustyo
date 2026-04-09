@@ -16,11 +16,13 @@ class Game:
         if self.has_won():
             self.won = True
             self.is_over = True
+            self.state = "game_over"
 
     def hit_monster(self):
         """resets score when player hits a monster"""
         self.score = 0
         self.is_over = True
+        self.state = "game_over"
 
     def has_won(self):
         """checks if the player has won the game"""

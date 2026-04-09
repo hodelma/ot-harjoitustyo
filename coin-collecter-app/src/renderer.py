@@ -61,3 +61,17 @@ class Renderer:
         self._display.blit(score, (500, 320))
         self._display.blit(quit_text, (500, 390))
 
+
+    def _draw_pause_menu(self):
+        font = pygame.font.Font(None, 48)
+        resume = font.render("Resume (ESC)", True, (255, 255, 255))
+        quit_text = font.render("Quit (Q)", True, (255, 255, 255))
+
+        self._display.blit(resume, (500, 250))
+        self._display.blit(quit_text, (500, 320))
+
+
+    def _draw_scoreboard(self):
+        font = pygame.font.Font(None, 48)
+        text = font.render(f"High Score: {self._game.high_score}", True, (255, 255, 255))
+        self._display.blit(text, (500, 300))

@@ -36,7 +36,7 @@ poetry install
 >
 >Mene projektin juureen tiedostoon .env
 >
->Muokkaa haluamasi tiedostonimi riville ```DATABASE_FILENAME="OMA_TIEDOSTO_NIMI.db"```
+>Muokkaa haluamasi tiedostonimi riville ```DATABASE_FILENAME=OMA_TIEDOSTO_NIMI.db```
 
 
 **3. Suorita tarvittavat alustustoimenpiteet:**

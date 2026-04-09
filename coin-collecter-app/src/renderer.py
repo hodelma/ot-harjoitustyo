@@ -48,3 +48,16 @@ class Renderer:
             text_rect = result_surface.get_rect(center=(600, 200))
             self._display.blit(result_surface, text_rect)
 
+
+    def _draw_menu(self):
+        font = pygame.font.Font(None, 48)
+        title = font.render("COIN GAME", True, (255, 255, 0))
+        start = font.render("Start (ENTER)", True, (255, 255, 255))
+        score = font.render("Scoreboard (S)", True, (255, 255, 255))
+        quit_text = font.render("Quit (Q)", True, (255, 255, 255))
+
+        self._display.blit(title, (500, 150))
+        self._display.blit(start, (500, 250))
+        self._display.blit(score, (500, 320))
+        self._display.blit(quit_text, (500, 390))
+

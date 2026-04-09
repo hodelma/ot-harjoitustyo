@@ -48,6 +48,11 @@ class Renderer:
             text_rect = result_surface.get_rect(center=(600, 200))
             self._display.blit(result_surface, text_rect)
 
+            instruction_text = "Press SPACE to return to menu"
+            instruction_surface = font.render(instruction_text, True, (255, 255, 255))
+            instruction_rect = instruction_surface.get_rect(center=(600, 250))
+            self._display.blit(instruction_surface, instruction_rect)
+
 
     def _draw_menu(self):
         font = pygame.font.Font(None, 48)

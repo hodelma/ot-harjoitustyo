@@ -76,6 +76,6 @@ class GameLoop:
             return True
 
         if event.key == pygame.K_SPACE and self._level.game.is_over:
-            self._level.reset()
+            self._level.game.state = "menu"
 
         return True

@@ -11,8 +11,7 @@ class Game:
         """increases score by one when a coin is collected"""
         self.score += 1
 
-        if self.score > self.high_score:
-            self.high_score = self.score
+        self.high_score = max(self.high_score, self.score)
 
         if self.has_won():
             self.won = True

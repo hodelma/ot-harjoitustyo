@@ -14,6 +14,7 @@ Pelin tavoitteena on kerätä kolikoita ja välttää hirviöitä. Pelaaja saa p
 - [x] Pelin tilan seuranta: pisteet, peli päättynyt/käynnissä, voitto
 - [ ] Eri pistearvot kolikoille
 - [ ] Graafisten tehosteiden ja animaatioiden lisääminen
+- [ ] Pelaaja ei kuole yhdestä törmäyksestä <br>
 
 ### Etusivu / valikko
 - [x] Start-nappi aloittaa pelin
@@ -30,6 +31,11 @@ Pelin tavoitteena on kerätä kolikoita ja välttää hirviöitä. Pelaaja saa p
   - "Quit" palaa etusivulle tai sulkee pelin
 
 ## Jatkokehitysideoita
-- [ ] Eri vaikeustasoilla esim. enemmän hirviöitä/nopeampi tahti <br>
-- [ ] Pelaaja ei kuole yhdestä törmäyksestä <br>
 - [ ] Ajastettu peli / aikaraja <br>
+- [ ] Boss-hahmo
+- [ ] Kolikkomagneetti vetää kolikot pelaajaan
+- [ ] Eri hirviötyypit
+- [ ] Useita kenttiä (erilainen teema joka kentässä)
+- [ ] Hirviöiden lisäksi esteitä pelikentällä
+- [ ] Ääniefektit ja musiikki
+- [ ] Käyttäjän luominen mahdollista (kirjautuminen, kilpailu muita pelaajia vastaan)

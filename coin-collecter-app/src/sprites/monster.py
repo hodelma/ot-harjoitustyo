@@ -10,8 +10,8 @@ class Monster(pygame.sprite.Sprite):
     def __init__(self, x=None, y=None):
         super().__init__()
 
-        self.monster_image = pygame.image.load(os.path.join(dirname, "..", "assets", "monster.png"))
-        self.rect = self.monster_image.get_rect()
+        self.image = pygame.image.load(os.path.join(dirname, "..", "assets", "monster.png"))
+        self.rect = self.image.get_rect()
         self.speed = 3
 
         if x is None:

@@ -9,8 +9,8 @@ class Coin(pygame.sprite.Sprite):
     def __init__(self, x=None, y=None):
         super().__init__()
 
-        self.coin_image = pygame.image.load(os.path.join(dirname, "..", "assets", "coin.png"))
-        self.rect = self.coin_image.get_rect()
+        self.image = pygame.image.load(os.path.join(dirname, "..", "assets", "coin.png"))
+        self.rect = self.image.get_rect()
         self.speed = 2
 
         if x is None:

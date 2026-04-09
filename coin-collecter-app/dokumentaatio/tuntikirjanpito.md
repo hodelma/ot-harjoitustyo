@@ -31,4 +31,5 @@
 | 7.4. | 2 | Pelilogiikan parantelua ja inspektointia |
 | 8.4. | 2 | Uusien luokkien lisäämistä ja UI rakentamista |
 | 9.4. | 3 | Luokkakaavion rakentelua, koodin refaktorointia ja UI juttuja |
-| **Yhteensä** | 58 | |
+|      | 0.5 | Dokumentaation päivittelyä | 
+| **Yhteensä** | 58.5 | |

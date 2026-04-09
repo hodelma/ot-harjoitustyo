@@ -31,26 +31,51 @@ class GameLoop:
                 return False
 
             if event.type == pygame.KEYDOWN:
-                if self._level.game.state == "menu":
-                    if event.key == pygame.K_RETURN:
-                        self._level.reset()
+                return self._handle_keydown(event)
 
-                    if event.key == pygame.K_q:
-                        return False
+        return True
 
-            if event.type == pygame.KEYDOWN:
-                if self._level.game.state == "paused":
-                    if event.key == pygame.K_q:
-                        self._level.game.state = "menu"
+    def _handle_keydown(self, event):
+        state = self._level.game.state
 
-            if event.type == pygame.KEYDOWN:
-                if event.key == pygame.K_ESCAPE:
-                    if self._level.game.state == "playing":
-                        self._level.game.state = "paused"
-                    elif self._level.game.state == "paused":
-                        self._level.game.state = "playing"
+        if state == "menu":
+            return self._menu_keydown(event)
 
-                if event.key == pygame.K_SPACE:
-                    if self._level.game.is_over:
-                        self._level.reset()
+        if state == "paused":
+            return self._paused_keydown(event)
+
+        if state == "playing":
+            return self._playing_keydown(event)
+
+        return True
+
+    def _menu_keydown(self, event):
+        if event.key == pygame.K_RETURN:
+            self._level.reset()
+            return True
+
+        if event.key == pygame.K_q:
+            return False
+
+        return True
+
+    def _paused_keydown(self, event):
+        if event.key == pygame.K_q:
+            self._level.game.state = "menu"
+            return True
+
+        if event.key == pygame.K_ESCAPE:
+            self._level.game.state = "playing"
+            return True
+
+        return True
+
+    def _playing_keydown(self, event):
+        if event.key == pygame.K_ESCAPE:
+            self._level.game.state = "paused"
+            return True
+
+        if event.key == pygame.K_SPACE and self._level.game.is_over:
+            self._level.reset()
+
         return True

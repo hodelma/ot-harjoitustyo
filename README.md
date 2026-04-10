@@ -59,6 +59,7 @@ poetry run invoke start
 ```bash
 poetry run invoke test
 ```
+Tällöin luodaan myös automaattisesti testitietokanta
 
 ### Testikattavuusraportti
 ```bash

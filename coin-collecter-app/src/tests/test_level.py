@@ -48,3 +48,22 @@ class TestLevel(unittest.TestCase):
         self.assertEqual(level.player.rect.x, 1250 // 2)
         self.assertEqual(level.player.rect.y, 700 // 2)
         self.assertEqual(len(level.coins), 3)
+
+    def test_player_stays_in_boundaries(self):
+        level = Level()
+        level.player.rect.x = -100
+        level.player.rect.y = -100
+
+        level._check_boundaries()
+
+        self.assertEqual(level.player.rect.x, 0)
+        self.assertEqual(level.player.rect.y, 0)
+
+    def test_player_doesnt_move_without_input(self):
+        level = Level()
+        level.game.state = "playing"
+
+        starting_position = level.player.rect.topleft
+        level.update(FakeKeys())
+
+        self.assertEqual(level.player.rect.topleft, starting_position)

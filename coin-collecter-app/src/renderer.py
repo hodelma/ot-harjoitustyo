@@ -68,7 +68,7 @@ class Renderer:
         font = pygame.font.Font(None, 48)
         title = font.render("COIN GAME", True, (255, 255, 0))
         start = font.render("Start (ENTER)", True, (255, 255, 255))
-        score = font.render("Scoreboard (S)", True, (255, 255, 255))
+        score = font.render("Scoreboard (S) (Coming soon!)", True, (255, 255, 255))
         quit_text = font.render("Quit (Q)", True, (255, 255, 255))
 
         self._display.blit(title, (500, 150))

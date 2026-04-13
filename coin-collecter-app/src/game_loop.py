@@ -11,17 +11,15 @@ class GameLoop:
 
     def start(self):
         """ starts the game loop"""
-        running = True
+        game_is_running = True
 
-        while running:
+        while game_is_running:
             if not self._handle_events():
-                running = False
+                game_is_running = False
 
             keys_pressed = pygame.key.get_pressed()
-
             self._level.update(keys_pressed)
             self._renderer.render()
-
             self._clock.tick(60)
 
     def _handle_events(self):

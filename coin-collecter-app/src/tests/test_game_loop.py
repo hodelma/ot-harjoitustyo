@@ -1,6 +1,6 @@
 import unittest
 import pygame
-from src.ui.game_loop import GameLoop
+from ui.game_loop import GameLoop
 from level import Level
 
 

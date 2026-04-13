@@ -12,21 +12,21 @@ Pelin tavoitteena on kerätä kolikoita ja välttää hirviöitä. Pelaaja saa p
 - [x] Pelin voittaminen: 20 kolikkoa kerätty, niin pelaaja voittaa
 - [ ] Eri pistearvot kolikoille
 - [ ] Graafisten tehosteiden ja animaatioiden lisääminen
-- [ ] Pelaaja ei kuole yhdestä törmäyksestä <br>
+- [ ] Pelaaja ei kuole yhdestä törmäyksestä
 
 ### Etusivu / valikko
-- [x] Start-nappi aloittaa pelin
-- [ ] Scoreboard-nappi näyttää pelaajan parhaat pisteet
-- [ ] Vaikeustasot (Easy/Medium/Hard) tai levelit (esim. hirviöiden nopeus)
-- [x] Quit-nappi sulkee pelin
+- [x] Start-toiminto aloittaa pelin
+- [ ] Scoreboard-toiminto näyttää pelaajan pisteet eri pelikerroilta
+- [ ] Vaikeustasot (Easy/Medium/Hard) tai levelit (hirviöiden nopeus/liikesuunta)
+- [x] Quit-toiminto sulkee pelin
 
 ### Peli-ikkuna
 - [x] Peli käynnissä ja hahmon ohjaus
 - [x] Game Over -näkymä - pelaaja häviää
 - [x] You Win -näkymä - pelaaja voittaa
-- [x] Esc-näppäin avaa valikon, jossa vaihtoehdot:
-  - "Resume" jatkaa peliä
-  - "Quit" palaa etusivulle tai sulkee pelin
+- [x] Ohje takaisin menuun pelin päättyessä
+- [ ] Play again/Restart game-toiminto, kun peli päättyy
+- [x] Esc-näppäin avaa valikon, jossa resume ja quit
 
 ## Jatkokehitysideoita
 - [ ] Ajastettu peli / aikaraja <br>
@@ -35,5 +35,5 @@ Pelin tavoitteena on kerätä kolikoita ja välttää hirviöitä. Pelaaja saa p
 - [ ] Eri hirviötyypit
 - [ ] Useita kenttiä (erilainen teema joka kentässä)
 - [ ] Hirviöiden lisäksi esteitä pelikentällä
-- [ ] Ääniefektit ja musiikki
-- [ ] Käyttäjän luominen mahdollista (kirjautuminen, kilpailu muita pelaajia vastaan)
+- [ ] Ääniefektit
+- [ ] Käyttäjän luominen mahdollista (kirjautuminen, kisaaminen muita pelaajia vastaan)

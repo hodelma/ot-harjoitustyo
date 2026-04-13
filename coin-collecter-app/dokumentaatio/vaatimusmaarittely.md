@@ -21,7 +21,6 @@ Pelin tavoitteena on kerätä kolikoita ja välttää hirviöitä. Pelaaja saa p
 - [x] Quit-toiminto sulkee pelin
 
 ### Peli-ikkuna
-- [x] Peli käynnissä ja hahmon ohjaus
 - [x] Game Over -näkymä - pelaaja häviää
 - [x] You Win -näkymä - pelaaja voittaa
 - [x] Ohje takaisin menuun pelin päättyessä

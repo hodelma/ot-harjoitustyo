@@ -3,7 +3,7 @@ from invoke import task
 
 @task
 def start(ctx):
-    ctx.run("PYTHONPATH=src python3 src/ui/main.py", pty=True)
+    ctx.run("python3 src/main.py", pty=True)
 
 @task
 def test(ctx):

@@ -45,7 +45,7 @@ class Renderer:
 
 
     def _draw_game_over(self):
-        font = pygame.font.Font(None, 36)
+        font = pygame.font.Font(None, 50)
 
         if self._game.won:
             result_text = "YOU WIN!"

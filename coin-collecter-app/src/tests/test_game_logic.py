@@ -23,13 +23,11 @@ class TestGame(unittest.TestCase):
     def test_has_won_returns_true_when_score_is_20(self):
         for _ in range(20):
             self.game.collect_coin()
-
         self.assertEqual(self.game.has_won(), True)
 
     def test_has_won_returns_false_when_score_is_less_than_20(self):
         for _ in range(10):
             self.game.collect_coin()
-
         self.assertEqual(self.game.has_won(), False)
 
     def test_reset_gets_default_state_back(self):

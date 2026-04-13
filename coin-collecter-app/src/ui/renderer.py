@@ -69,7 +69,7 @@ class Renderer:
         title = font.render("COIN GAME", True, (255, 255, 0))
         start = font.render("Start (ENTER)", True, (255, 255, 255))
         score = font.render("Scoreboard (S) (Coming soon!)", True, (255, 255, 255))
-        quit_text = font.render("Quit (Q)", True, (255, 255, 255))
+        quit_text = font.render("Quit game (Q)", True, (255, 255, 255))
 
         self._display.blit(title, (500, 150))
         self._display.blit(start, (500, 250))
@@ -80,7 +80,7 @@ class Renderer:
     def _draw_pause_menu(self):
         font = pygame.font.Font(None, 48)
         resume = font.render("Resume (ESC)", True, (255, 255, 255))
-        quit_text = font.render("Quit (Q)", True, (255, 255, 255))
+        quit_text = font.render("Back to menu (Q)", True, (255, 255, 255))
 
         self._display.blit(resume, (500, 250))
         self._display.blit(quit_text, (500, 320))

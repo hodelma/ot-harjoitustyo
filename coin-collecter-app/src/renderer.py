@@ -28,30 +28,40 @@ class Renderer:
 
     def _render_ui(self):
         """draws ui elements like score"""
-        font = pygame.font.Font(None, 36)
-        score_text = f"Score: {self._game.score}"
-        score_surface = font.render(score_text, True, (255, 255, 255))
-        self._display.blit(score_surface, (10, 10))
+        self._draw_score()
 
         if self._game.state == "paused":
             self._draw_pause_menu()
 
         if self._game.is_over:
-            if self._game.won:
-                result_text = "YOU WIN!"
-                color = (0, 255, 0)
-            else:
-                result_text = "GAME OVER!"
-                color = (255, 0, 0)
+            self._draw_game_over()
 
-            result_surface = font.render(result_text, True, color)
-            text_rect = result_surface.get_rect(center=(600, 200))
-            self._display.blit(result_surface, text_rect)
 
-            instruction_text = "Press SPACE to return to menu"
-            instruction_surface = font.render(instruction_text, True, (255, 255, 255))
-            instruction_rect = instruction_surface.get_rect(center=(600, 250))
-            self._display.blit(instruction_surface, instruction_rect)
+    def _draw_score(self):
+        font = pygame.font.Font(None, 36)
+        score_text = f"Score: {self._game.score}"
+        score_image = font.render(score_text, True, (255, 255, 255))
+        self._display.blit(score_image, (10, 10))
+
+
+    def _draw_game_over(self):
+        font = pygame.font.Font(None, 36)
+
+        if self._game.won:
+            result_text = "YOU WIN!"
+            color = (0, 255, 0)
+        else:
+            result_text = "GAME OVER!"
+            color = (255, 0, 0)
+
+        result_image = font.render(result_text, True, color)
+        text_rect = result_image.get_rect(center=(600, 200))
+        self._display.blit(result_image, text_rect)
+
+        instruction_text = "Press SPACE to return to main menu"
+        instruction_image = font.render(instruction_text, True, (255, 255, 255))
+        instruction_rect = instruction_image.get_rect(center=(600, 250))
+        self._display.blit(instruction_image, instruction_rect)
 
 
     def _draw_menu(self):

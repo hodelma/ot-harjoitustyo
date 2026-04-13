@@ -13,3 +13,4 @@
 - Käyttäjä näkee etusivun, peli-ikkunan ja pause menu -ikkunan
 - Käyttäjä näkee voitto- tai häviönäkymän
 - Lisätty `GameLoop` ja `Level` luokat sekä niille testejä
+- Otettu pylint käyttöön

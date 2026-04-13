@@ -1,6 +1,7 @@
 import os
 import random
 import pygame
+from utils import set_position
 
 dirname = os.path.dirname(__file__)
 
@@ -14,15 +15,7 @@ class Monster(pygame.sprite.Sprite):
         self.rect = self.image.get_rect()
         self.speed = 3
 
-        if x is None:
-            self.rect.x = random.randint(0, 1250 - self.rect.width)
-        else:
-            self.rect.x = x
-
-        if y is None:
-            self.rect.y = random.randint(-700 // 2, -self.rect.height)
-        else:
-            self.rect.y = y
+        set_position(self.rect, x, y, (-700 // 2, -self.rect.height))
 
     def update(self):
         """move monster down and reset position"""

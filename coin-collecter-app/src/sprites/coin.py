@@ -1,6 +1,7 @@
 import os
 import random
 import pygame
+from utils import set_position
 
 dirname = os.path.dirname(__file__)
 
@@ -13,18 +14,10 @@ class Coin(pygame.sprite.Sprite):
         self.rect = self.image.get_rect()
         self.speed = 2
 
-        if x is None:
-            self.rect.x = random.randint(0, 1250 - self.rect.width)
-        else:
-            self.rect.x = x
-
-        if y is None:
-            self.rect.y = random.randint(-1250 // 2, 0)
-        else:
-            self.rect.y = y
+        set_position(self.rect, x, y, (-1250 // 2, 0))
 
     def update(self):
-        """moves coin downward and wraps if it reaches bottom"""
+        """moves coin down and wraps if it gets to the bottom"""
         self.rect.y += self.speed
         if self.rect.y > 700:
             self.randomize_position()

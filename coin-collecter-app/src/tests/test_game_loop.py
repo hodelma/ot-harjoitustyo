@@ -40,3 +40,23 @@ class TestGameLoop(unittest.TestCase):
         self.assertEqual(result, True)
         self.assertEqual(game_loop._level.game.state, "playing")
         self.assertEqual(game_loop._level.game.score, 0)
+
+    def test_playing_escape_pauses_game(self):
+        game_loop = _make_game_loop()
+        game_loop._level.game.state = "playing"
+
+        event = pygame.event.Event(pygame.KEYDOWN, {"key": pygame.K_ESCAPE})
+        result = game_loop._playing_keydown(event)
+
+        self.assertEqual(result, True)
+        self.assertEqual(game_loop._level.game.state, "paused")
+
+    def test_paused_escape_resumes_game(self):
+        game_loop = _make_game_loop()
+        game_loop._level.game.state = "paused"
+
+        event = pygame.event.Event(pygame.KEYDOWN, {"key": pygame.K_ESCAPE})
+        result = game_loop._paused_keydown(event)
+
+        self.assertEqual(result, True)
+        self.assertEqual(game_loop._level.game.state, "playing")

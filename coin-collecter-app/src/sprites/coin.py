@@ -1,7 +1,7 @@
 import os
 import random
 import pygame
-from utils import set_position
+from utils.utils import set_position
 
 dirname = os.path.dirname(__file__)
 

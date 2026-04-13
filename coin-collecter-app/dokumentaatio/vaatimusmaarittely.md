@@ -36,3 +36,4 @@ Pelin tavoitteena on kerätä kolikoita ja välttää hirviöitä. Pelaaja saa p
 - [ ] Hirviöiden lisäksi esteitä pelikentällä
 - [ ] Ääniefektit
 - [ ] Käyttäjän luominen mahdollista (kirjautuminen, kisaaminen muita pelaajia vastaan)
+- [ ] Uusien pelihahmojen unlockaaminen mitä pidemmälle pelissä pääsee

@@ -1,8 +1,8 @@
 import pygame
 from level import Level
-from game_loop import GameLoop
+from ui.game_loop import GameLoop
 from event_queue import EventQueue
-from renderer import Renderer
+from ui.renderer import Renderer
 from clock import Clock
 
 

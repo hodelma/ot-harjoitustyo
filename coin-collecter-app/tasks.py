@@ -3,28 +3,23 @@ from invoke import task
 
 @task
 def start(ctx):
-    ctx.run("python3 src/main.py", pty=True)
-
+    ctx.run("PYTHONPATH=src python3 src/ui/main.py", pty=True)
 
 @task
 def test(ctx):
     ctx.run("pytest src/tests", pty=True)
 
-
 @task
 def build(ctx):
     ctx.run("python3 src/build.py", pty=True)
-
 
 @task
 def lint(ctx):
     ctx.run("pylint src", pty=True)
 
-
 @task
 def coverage(ctx):
     ctx.run("coverage run --branch -m pytest src/tests", pty=True)
-
 
 @task(coverage)
 def coverage_report(ctx):

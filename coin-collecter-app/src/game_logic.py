@@ -7,10 +7,8 @@ class Game:
         self.state = "menu"
         self.high_score = 0
 
-    def collect_coin(self):
-        """increases score by one when a coin is collected"""
-        self.score += 1
-
+    def collect_coin(self, value):
+        self.score += value
         self.high_score = max(self.high_score, self.score)
 
         if self.has_won():

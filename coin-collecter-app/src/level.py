@@ -75,8 +75,8 @@ class Level:
             self.player, self.coins, True, pygame.sprite.collide_rect_ratio(0.7)
             )
 
-        for _ in coins_hit:
-            self.game.collect_coin()
+        for coin in coins_hit:
+            self.game.collect_coin(coin.value)
             new_coin = Coin()
             self.all_sprites.add(new_coin)
             self.coins.add(new_coin)

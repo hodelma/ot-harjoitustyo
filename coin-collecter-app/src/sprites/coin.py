@@ -10,7 +10,20 @@ class Coin(pygame.sprite.Sprite):
     def __init__(self, x=None, y=None):
         super().__init__()
 
-        self.image = pygame.image.load(os.path.join(dirname, "..", "assets", "coin.png"))
+        roll = random.random()
+        if roll < 0.60:
+            self.value = 1
+            image_file = "coin.png"
+
+        elif roll < 0.85:
+            self.value = 2
+            image_file = "coin2.png"
+
+        else:
+            self.value = 3
+            image_file = "coin3.png"
+
+        self.image = pygame.image.load(os.path.join(dirname, "..", "assets", image_file))
         self.rect = self.image.get_rect()
         self.speed = 2
 

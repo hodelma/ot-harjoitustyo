@@ -43,6 +43,10 @@ class Renderer:
         score_image = font.render(score_text, True, (255, 255, 255))
         self._display.blit(score_image, (10, 10))
 
+        lives_text = f"Lives left: {self._game.lives}"
+        lives_image = font.render(lives_text, True, (255, 100, 100))
+        self._display.blit(lives_image, (10, 45))
+
 
     def _draw_game_over(self):
         font = pygame.font.Font(None, 50)

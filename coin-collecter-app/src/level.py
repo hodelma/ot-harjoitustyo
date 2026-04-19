@@ -9,6 +9,7 @@ class Level:
     """manages all game objects and handles collisions"""
     def __init__(self):
         self.game = Game()
+        self._undefeatable_until = 0
 
         #creates sprite groups
         self.all_sprites = pygame.sprite.Group()
@@ -81,12 +82,20 @@ class Level:
             self.all_sprites.add(new_coin)
             self.coins.add(new_coin)
 
-        monsters_hit = pygame.sprite.spritecollide(
-            self.player, self.monsters, False, pygame.sprite.collide_rect_ratio(0.8)
-            )
+        right_now = pygame.time.get_ticks()
+        if right_now >= self._undefeatable_until:
+            monsters_hit = pygame.sprite.spritecollide(
+                self.player, self.monsters, False, pygame.sprite.collide_rect_ratio(0.8))
 
-        if monsters_hit:
-            self.game.hit_monster()
+            if monsters_hit:
+                self.game.hit_monster()
+                self._undefeatable_until = right_now + 2000
+
+                for monster in monsters_hit:
+                    monster.kill()
+                    new_monster = Monster()
+                    self.all_sprites.add(new_monster)
+                    self.monsters.add(new_monster)
 
     def reset(self):
         """resets the level"""

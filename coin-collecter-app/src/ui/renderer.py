@@ -50,6 +50,7 @@ class Renderer:
 
     def _draw_game_over(self):
         font = pygame.font.Font(None, 50)
+        small_font = pygame.font.Font(None, 36)
 
         if self._game.won:
             result_text = "YOU WIN!"
@@ -59,13 +60,15 @@ class Renderer:
             color = (255, 0, 0)
 
         result_image = font.render(result_text, True, color)
-        text_rect = result_image.get_rect(center=(600, 200))
-        self._display.blit(result_image, text_rect)
+        self._display.blit(result_image, result_image.get_rect(center=(600, 200)))
 
-        instruction_text = "Press SPACE to return to main menu"
-        instruction_image = font.render(instruction_text, True, (255, 255, 255))
-        instruction_rect = instruction_image.get_rect(center=(600, 250))
-        self._display.blit(instruction_image, instruction_rect)
+        score_image = small_font.render(f"Final score: {self._game.score}", True, (255, 255, 255))
+        self._display.blit(score_image, score_image.get_rect(center=(600, 260)))
+
+        restart_game = small_font.render("Play again (R)", True, (255, 255, 255))
+        menu_text = small_font.render("Go back to main menu (SPACE)", True, (255, 255, 255))
+        self._display.blit(restart_game, restart_game.get_rect(center=(600, 320)))
+        self._display.blit(menu_text, menu_text.get_rect(center=(600, 370)))
 
 
     def _draw_menu(self):

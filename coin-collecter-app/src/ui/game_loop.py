@@ -76,12 +76,13 @@ class GameLoop:
             self._level.game.state = "paused"
             return True
 
-        if event.key == pygame.K_SPACE and self._level.game.is_over:
-            self._level.reset()
-
         return True
 
     def _game_over_keydown(self, event):
+        if event.key == pygame.K_r:
+            self._level.reset()
+            return True
+        
         if event.key == pygame.K_SPACE:
             self._level.game.state = "menu"
             return True

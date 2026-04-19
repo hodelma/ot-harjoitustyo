@@ -13,7 +13,7 @@ class Coin(pygame.sprite.Sprite):
         roll = random.random()
         if roll < 0.60:
             self.value = 1
-            image_file = "coin.png"
+            image_file = "coin1.png"
 
         elif roll < 0.85:
             self.value = 2

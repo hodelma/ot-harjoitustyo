@@ -34,4 +34,7 @@
 |      | 0.5 | Dokumentaation päivittelyä |
 | 12.4. | 2.5 | Testausta |
 | 13.4. | 4 | Testausta, konffausta, laajempaa refaktorointia, dokumentaatiota |
-| **Yhteensä** | 65 | |
+| 15.4. | 1 | Konfigurointia ja sovelluksen toimintojen kokeilua |
+| 19.4. | 3 | Uusien pelitoimintojen ja logiikan luomista |
+| 20.4. | 2 | Testien tekoa uusille toiminnoille ja sekvenssikaavioiden tekoa |
+| **Yhteensä** | 71 | |

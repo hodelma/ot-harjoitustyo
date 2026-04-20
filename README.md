@@ -1,6 +1,6 @@
 # Kolikkokerääjä peli
 
-Pelaaja voi pelata kolikkopeliä, jossa tavoitteena on kerätä kolikoita ja välttää hirviöitä. Pelaaja saa pisteitä kerätyistä kolikoista, mutta törmätessä hirviöön kolme kertaa, pelaaja häviää. Pelaaja voittaa pelin, kun pelaaja kerää vähintään 20 kolikkoa.
+Pelaaja voi pelata kolikkopeliä, jossa tavoitteena on kerätä kolikoita ja välttää hirviöitä. Pelaaja saa pisteitä kerätyistä kolikoista, mutta törmätessä hirviöön kolme kertaa, pelaaja häviää. Pelaaja voittaa pelin, kun kerää vähintään 20 kolikkoa.
 
 
 ## Dokumentaatio

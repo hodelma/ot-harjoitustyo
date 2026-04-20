@@ -20,7 +20,7 @@ class TestGame(unittest.TestCase):
         self.game.collect_coin(3)
         self.assertEqual(self.game.score, 6)
 
-    def test_hit_monster_does_not_reset_score(self):
+    def test_hit_monster_doesnt_reset_score(self):
         self.game.collect_coin(1)
         self.game.hit_monster()
         self.assertEqual(self.game.score, 1)
@@ -32,7 +32,7 @@ class TestGame(unittest.TestCase):
         self.game.hit_monster()
         self.assertEqual(self.game.lives, 2)
 
-    def test_hit_monster_once_does_not_set_game_over(self):
+    def test_hit_monster_once_doesnt_set_game_over(self):
         self.game.hit_monster()
         self.assertEqual(self.game.is_over, False)
 

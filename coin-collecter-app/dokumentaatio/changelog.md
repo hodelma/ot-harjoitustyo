@@ -14,3 +14,9 @@
 - Käyttäjä näkee voitto- tai häviönäkymän
 - Lisätty `GameLoop` ja `Level` luokat sekä niille testejä
 - Otettu pylint käyttöön
+
+## Viikko 5
+- Käyttäjä voi aloittaa pelin heti uudelleen pelin päättymisen jälkeen
+- Testattu, että kolmen elämän loppuessa score ja elämät resetoituvat, kun pelin aloittaa uudelleen
+- Käyttäjä voi kerätä eri arvoisia kolikoita
+- Käyttäjä ei kuole yhdestä hirviöön törmäyksestä

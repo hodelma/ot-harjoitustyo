@@ -10,6 +10,9 @@ Pelaaja voi pelata kolikkopeliä, jossa tavoitteena on kerätä kolikoita ja vä
 - [Työaikakirjanpito](coin-collecter-app/dokumentaatio/tuntikirjanpito.md)<br>
 - [Changelog](coin-collecter-app/dokumentaatio/changelog.md)
 
+## Release
+[Viikon 5 release](https://github.com/hodelma/ot-harjoitustyo/releases/tag/viikko5)
+
 <br>
 
 >[!Important]

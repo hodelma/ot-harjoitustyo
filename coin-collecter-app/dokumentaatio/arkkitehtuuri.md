@@ -1,4 +1,4 @@
-# Pelin luokkakaavio
+## Pelin luokkakaavio
 ```mermaid
 classDiagram
     class Game {
@@ -61,4 +61,35 @@ classDiagram
     GameLoop --> Renderer
     GameLoop --> EventQueue
     Renderer --> Game
+```
+
+## Sekvenssikaavio kolikon keräämisestä
+```mermaid
+sequenceDiagram
+    actor Player
+    participant Level
+    participant Game
+
+    Player->>Level: update(keys_pressed)
+    Level->>Level: _check_collisions()
+    Level->>Game: collect_coin(coin.value)
+    Game->>Game: score += value
+    Game-->>Level: return
+    Level->>Level: Coin(), all_sprites.add(), coins.add()
+```
+
+## Sekvenssikaavio hirviöön törmäämisestä
+```mermaid
+sequenceDiagram
+    actor Player
+    participant Level
+    participant Game
+
+    Player->>Level: update(keys_pressed)
+    Level->>Level: _check_collisions()
+    Level->>Game: hit_monster()
+    Game->>Game: lives -= 1
+    Game-->>Level: return
+    Level->>Level: monster.kill()
+    Level->>Level: Monster(), all_sprites.add(), monsters.add()
 ```

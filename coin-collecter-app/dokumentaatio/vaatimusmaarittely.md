@@ -5,7 +5,7 @@ Pelin tavoitteena on kerätä kolikoita ja välttää hirviöitä. Pelaaja saa p
 
 ## Suunnitellut toiminnallisuudet
 
-### Perusversio (ydintoiminnallisuus)
+### Perusversion ydintoiminnallisuus
 - [x] Pelaajan hahmon liikkuminen ruudulla
 - [x] Kolikoiden kerääminen kasvattaa pistesaldoa
 - [x] Hirviöön osuminen johtaa pisteiden nollaamiseen ja pelin päättymiseen
@@ -28,11 +28,11 @@ Pelin tavoitteena on kerätä kolikoita ja välttää hirviöitä. Pelaaja saa p
 - [x] Esc-näppäin avaa valikon, jossa resume ja quit
 
 ## Jatkokehitysideoita
-- [ ] Ajastettu peli / aikaraja <br>
+- [ ] Ajastettu peli
 - [ ] Boss-hirviöhahmo
 - [ ] Eri hirviötyypit
-- [ ] Useita kenttiä (erilainen teema joka kentässä)
+- [ ] Useita teemakenttiä
 - [ ] Hirviöiden lisäksi esteitä pelikentällä
 - [ ] Ääniefektit
-- [ ] Käyttäjän luominen mahdollista (kirjautuminen, kisaaminen muita pelaajia vastaan)
+- [ ] Käyttäjän luominen mahdollista
 - [ ] Uusien pelihahmojen unlockaaminen mitä pidemmälle pelissä pääsee

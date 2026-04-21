@@ -19,4 +19,4 @@
 - Käyttäjä voi aloittaa pelin heti uudelleen pelin päättymisen jälkeen
 - Testattu, että kolmen elämän loppuessa score ja elämät resetoituvat, kun pelin aloittaa uudelleen
 - Käyttäjä voi kerätä eri arvoisia kolikoita
-- Käyttäjä ei kuole yhdestä hirviöön törmäyksestä
+- Käyttäjä ei kuole yhdestä hirviöön törmäyksestä (voi seurata elämiään)

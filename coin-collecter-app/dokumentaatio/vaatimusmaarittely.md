@@ -29,8 +29,7 @@ Pelin tavoitteena on kerätä kolikoita ja välttää hirviöitä. Pelaaja saa p
 
 ## Jatkokehitysideoita
 - [ ] Ajastettu peli / aikaraja <br>
-- [ ] Boss-hahmo
-- [ ] Kolikkomagneetti vetää kolikot pelaajaan
+- [ ] Boss-hirviöhahmo
 - [ ] Eri hirviötyypit
 - [ ] Useita kenttiä (erilainen teema joka kentässä)
 - [ ] Hirviöiden lisäksi esteitä pelikentällä

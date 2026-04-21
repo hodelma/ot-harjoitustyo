@@ -37,4 +37,5 @@
 | 15.4. | 1 | Konfigurointia ja sovelluksen toimintojen kokeilua |
 | 19.4. | 3 | Uusien pelitoimintojen ja logiikan luomista |
 | 20.4. | 2 | Testien tekoa uusille toiminnoille ja sekvenssikaavioiden tekoa |
-| **Yhteensä** | 71 | |
+| 21.4. | 1 | Dokumentaation päivitystä ja releasen testaamista |
+| **Yhteensä** | 72 | |

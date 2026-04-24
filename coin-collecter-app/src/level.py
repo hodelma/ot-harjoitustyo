@@ -2,7 +2,7 @@ import pygame
 from sprites.player import Player
 from sprites.coin import Coin
 from sprites.monster import Monster
-from game_logic import Game
+from game_logic import Game, roll_coin
 
 
 class Level:
@@ -22,7 +22,8 @@ class Level:
 
         #creates three coins randomly on the screen
         for _ in range(3):
-            coin = Coin()
+            value, image_file = roll_coin()
+            coin = Coin(value, image_file)
             self.all_sprites.add(coin)
             self.coins.add(coin)
 
@@ -78,7 +79,8 @@ class Level:
 
         for coin in coins_hit:
             self.game.collect_coin(coin.value)
-            new_coin = Coin()
+            value, image_file = roll_coin()
+            new_coin = Coin(value, image_file)
             self.all_sprites.add(new_coin)
             self.coins.add(new_coin)
 
@@ -106,7 +108,8 @@ class Level:
         self.coins.empty()
 
         for _ in range(3):
-            coin = Coin()
+            value, image_file = roll_coin()
+            coin = Coin(value, image_file)
             self.all_sprites.add(coin)
             self.coins.add(coin)
 

@@ -1,3 +1,16 @@
+import random
+
+ALL_COINS = [
+    (0.60, 1, "coin1.png"),
+    (0.85, 2, "coin2.png"),
+    (1.00, 3, "coin3.png"),]
+
+def roll_coin():
+    roll = random.random()
+    for threshold, value, image_file in ALL_COINS:
+        if roll < threshold:
+            return value, image_file
+
 class Game:
     """manages the game state and logic"""
     def __init__(self):

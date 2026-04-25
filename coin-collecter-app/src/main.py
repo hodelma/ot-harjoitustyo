@@ -5,11 +5,13 @@ from ui.renderer import Renderer
 from event_queue import EventQueue
 from clock import Clock
 from repositories.score_repository import get_score_repository
+from db.initialize_database import initialize_database
 
 
 def main():
     """initializes and starts the game"""
     pygame.init()
+    initialize_database()
 
     display = pygame.display.set_mode((1250, 700))
     pygame.display.set_caption("Coin Collector Game")

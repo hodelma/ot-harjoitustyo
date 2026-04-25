@@ -3,10 +3,11 @@ import pygame
 
 class Renderer:
     """handles rendering of sprites to the display"""
-    def __init__(self, display, all_sprites, game):
+    def __init__(self, display, all_sprites, game, score_repository):
         self._display = display
         self._all_sprites = all_sprites
         self._game = game
+        self._score_repository = score_repository
 
 
     def render(self):
@@ -94,6 +95,23 @@ class Renderer:
 
 
     def _draw_scoreboard(self):
-        font = pygame.font.Font(None, 48)
-        text = font.render(f"High Score: {self._game.high_score}", True, (255, 255, 255))
-        self._display.blit(text, (500, 300))
+        font_title = pygame.font.Font(None, 56)
+        font = pygame.font.Font(None, 36)
+
+        title = font_title.render("SCOREBOARD", True, (255, 255, 0))
+        self._display.blit(title, (480, 80))
+
+        high_score = self._score_repository.get_high_score()
+        high_score_text = font.render(f"High Score: {high_score}", True, (0, 255, 0))
+        self._display.blit(high_score_text, (520, 160))
+
+        recent_games_text = font.render("Recent games:", True, (200, 200, 200))
+        self._display.blit(recent_games_text, (520, 210))
+
+        scores = self._score_repository.get_recent_scores(10)
+        for i, score_row in enumerate(scores):
+            line = font.render(f"{i + 1}.  {score_row["score"]} points", True, (255, 255, 255))
+            self._display.blit(line, (520, 250 + i * 36))
+
+        back = font.render("Back (ESC)", True, (180, 180, 180))
+        self._display.blit(back, (520, 620))

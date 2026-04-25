@@ -39,6 +39,9 @@ class GameLoop:
         if state == "menu":
             return self._menu_keydown(event)
 
+        if state == "scoreboard":
+            return self._scoreboard_keydown(event)
+
         if state == "paused":
             return self._paused_keydown(event)
 
@@ -53,6 +56,10 @@ class GameLoop:
     def _menu_keydown(self, event):
         if event.key == pygame.K_RETURN:
             self._level.reset()
+            return True
+
+        if event.key == pygame.K_s:
+            self._level.game.state = "scoreboard"
             return True
 
         if event.key == pygame.K_q:
@@ -76,6 +83,11 @@ class GameLoop:
             self._level.game.state = "paused"
             return True
 
+        return True
+    
+    def _scoreboard_keydown(self, event):
+        if event.key == pygame.K_ESCAPE:
+            self._level.game.state = "menu"
         return True
 
     def _game_over_keydown(self, event):

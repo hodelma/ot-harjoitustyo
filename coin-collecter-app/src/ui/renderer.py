@@ -55,12 +55,17 @@ class Renderer:
 
         if self._game.won:
             result_text = "YOU WIN!"
-            color = (0, 255, 0)
+            bright_color = (0, 255, 0)
+            dark_color = (0, 100, 0)
+
         else:
             result_text = "GAME OVER!"
-            color = (255, 0, 0)
+            bright_color = (255, 0, 0)
+            dark_color = (100, 0, 0)
 
-        result_image = font.render(result_text, True, color)
+        current_time = pygame.time.get_ticks()
+        blink_color = bright_color if (current_time // 500) % 2 == 0 else dark_color
+        result_image = font.render(result_text, True, blink_color)
         self._display.blit(result_image, result_image.get_rect(center=(600, 200)))
 
         score_image = small_font.render(f"Final score: {self._game.score}", True, (255, 255, 255))
@@ -75,14 +80,16 @@ class Renderer:
     def _draw_menu(self):
         font = pygame.font.Font(None, 48)
         title = font.render("COIN GAME", True, (255, 255, 0))
-        start = font.render("Start (ENTER)", True, (255, 255, 255))
-        score = font.render("Scoreboard (S) (Coming soon!)", True, (255, 255, 255))
-        quit_text = font.render("Quit game (Q)", True, (255, 255, 255))
+        info = font.render("Welcome to the Coin Game. Watch out for the monsters!", True, (255, 150, 0))
+        start = font.render("Start (ENTER)", True, (0, 255, 0))
+        score = font.render("Scoreboard (S)", True, (255, 255, 255))
+        quit_text = font.render("Quit game (Q)", True, (255, 0, 0))
 
         self._display.blit(title, (500, 150))
-        self._display.blit(start, (500, 250))
-        self._display.blit(score, (500, 320))
-        self._display.blit(quit_text, (500, 390))
+        self._display.blit(info, info.get_rect(center=(625, 210)))
+        self._display.blit(start, (500, 300))
+        self._display.blit(score, (500, 380))
+        self._display.blit(quit_text, (500, 500))
 
 
     def _draw_pause_menu(self):

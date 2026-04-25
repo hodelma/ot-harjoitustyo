@@ -3,12 +3,14 @@ from sprites.player import Player
 from sprites.coin import Coin
 from sprites.monster import Monster
 from game_logic import Game, roll_coin
+from repositories.score_repository import get_score_repository
 
 
 class Level:
     """manages all game objects and handles collisions"""
     def __init__(self):
-        self.game = Game()
+        score_repository = get_score_repository()
+        self.game = Game(score_repository)
         self._undefeatable_until = 0
 
         #creates sprite groups

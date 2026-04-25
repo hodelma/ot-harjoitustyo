@@ -13,13 +13,14 @@ def roll_coin():
 
 class Game:
     """manages the game state and logic"""
-    def __init__(self):
+    def __init__(self, score_repository=None):
         self.score = 0
         self.is_over = False
         self.won = False
         self.state = "menu"
         self.high_score = 0
         self.lives = 3
+        self._score_repository = score_repository
 
     def collect_coin(self, value):
         self.score += value
@@ -29,6 +30,7 @@ class Game:
             self.won = True
             self.is_over = True
             self.state = "game_over"
+            self._save_score()
 
     def hit_monster(self):
         """resets score when player hits a monster"""
@@ -36,6 +38,12 @@ class Game:
         if self.lives <= 0:
             self.is_over = True
             self.state = "game_over"
+            self._save_score()
+
+    def _save_score(self):
+        """saves score to db if repository exists"""
+        if self._score_repository:
+            self._score_repository.save_score(self.score)
 
     def has_won(self):
         """checks if the player has won the game"""

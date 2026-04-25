@@ -4,6 +4,7 @@ from ui.game_loop import GameLoop
 from ui.renderer import Renderer
 from event_queue import EventQueue
 from clock import Clock
+from repositories.score_repository import get_score_repository
 
 
 def main():
@@ -15,7 +16,8 @@ def main():
 
     level = Level()
     event_queue = EventQueue()
-    renderer = Renderer(display, level.all_sprites, level.game)
+    score_repository = get_score_repository()
+    renderer = Renderer(display, level.all_sprites, level.game, score_repository)
     clock = Clock()
 
     game_loop = GameLoop(level, renderer, event_queue, clock)

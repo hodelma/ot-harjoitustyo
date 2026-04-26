@@ -1,7 +1,7 @@
 import unittest
 import pygame
 from ui.game_loop import GameLoop
-from level import Level
+from game_logic.level import Level
 
 
 class DummyQueue:

@@ -1,5 +1,5 @@
 import pygame
-from level import Level
+from game_logic.level import Level
 from ui.game_loop import GameLoop
 from ui.renderer import Renderer
 from event_queue import EventQueue

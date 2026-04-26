@@ -24,7 +24,7 @@ Toiminnallisista kokonaisuuksista vastaa pääosin `Level`-luokan olio, joka hal
 - `hit_monster()` vähentää elämiä kun hirviö osuu pelaajaan
 - `has_won()` tarkistaa voittoehdot
 
-`Level`-luokka hallinnoi (all_sprites, coins, monsters) ja päivittää pelaajan liikettä, tarkistaa törmäykset ja hallinnoi peliobjektien luomista ja poistamista.
+`Level`-luokka hallinnoi `all_sprites`, `coins`, `monsters` ja päivittää pelaajan liikettä, tarkistaa törmäykset ja hallinnoi peliobjektien luomista ja poistamista.
 
 
 

@@ -1,6 +1,36 @@
 # Arkkitehtuurikuvaus
 
-## Pelin luokkakaavio
+
+
+## Rakenne
+
+Alla näkyy koodin suurpiirteinen pakkausrakenne:
+
+![Pakkauskaavio](kuvat/pakkauskaavio.png)
+
+
+Pakkaus *ui* sisältää käyttöliittymästä eli pelisilmukasta ja piirtämisestä, *repositories* tietojen pysyväistallennuksesta, *sprites* ja *db* tietokannan hallinnasta vastaavan koodin. *game_logic.py* sisältää pelilogiikan ja *level.py* pelin tason objektit sekä törmäystarkistukset.
+
+
+
+
+## Sovelluslogiikka
+
+Sovelluksen loogisen tietomallin muodostavat luokat `Game`, `Level` ja pelutujen luokat (`Player`, `Coin`, `Monster`), jotka kuvaavat pelin tilaa ja objekteja.
+
+Toiminnallisista kokonaisuuksista vastaa pääosin `Level`-luokan olio, joka hallinnoi kaikki peliutujen ja pelilogiikan. `Game`-luokka pitää yllä pelitilaa (pistemäärä, elämät, pelivaltio). Luokka tarjoaa metodeja peliloogiikan toiminnoille:
+
+- `collect_coin(value)` lisää pisteen kun kolikko kerätään
+- `hit_monster()` vähentää elämää kun hirviö osuu
+- `has_won()` tarkistaa voittoehdot
+
+`Level`-luokka hallinnoi (all_sprites, coins, monsters) ja päivittää pelaajan liikettä, tarkistaa törmäykset ja hallinnoi peliobjektien luomista ja poistamista.
+
+
+
+
+### Pelin luokkakaavio
+
 ```mermaid
 classDiagram
     class Game {
@@ -9,7 +39,8 @@ classDiagram
       +bool won
       +str state
       +int high_score
-      +collect_coin()
+      +int lives
+      +collect_coin(value)
       +hit_monster()
       +has_won()
       +reset()
@@ -23,6 +54,8 @@ classDiagram
       +Group monsters
       +update(keys_pressed)
       +reset()
+      -_check_boundaries()
+      -_check_collisions()
     }
 
     class Player {
@@ -33,6 +66,7 @@ classDiagram
 
     class Coin {
       +int speed
+      +int value
       +update()
       +randomize_position()
     }
@@ -45,6 +79,8 @@ classDiagram
 
     class GameLoop {
       +start()
+      -_handle_events()
+      -_handle_keydown(event)
     }
 
     class Renderer {
@@ -55,6 +91,12 @@ classDiagram
       +get()
     }
 
+    class ScoreRepository {
+      +save_score(score)
+      +get_high_score()
+      +get_recent_scores(limit)
+    }
+
     Level --> Game
     Level --> Player
     Level "1" o-- "many" Coin : coins
@@ -63,35 +105,79 @@ classDiagram
     GameLoop --> Renderer
     GameLoop --> EventQueue
     Renderer --> Game
+    Game --> ScoreRepository
 ```
 
-## Sekvenssikaavio kolikon keräämisestä
+
+
+
+
+## Päätoiminnallisuudet
+
+### Kolikon kerääminen
+
 ```mermaid
 sequenceDiagram
-    actor Player
+    actor User
+    participant GameLoop
     participant Level
     participant Game
+    participant ScoreRepository
 
-    Player->>Level: update(keys_pressed)
+    User->>GameLoop: Press arrow key
+    GameLoop->>Level: update(keys_pressed)
+    Level->>Level: player.move(dx, dy)
     Level->>Level: _check_collisions()
     Level->>Game: collect_coin(coin.value)
     Game->>Game: score += value
+    Game->>ScoreRepository: Potentially save score
     Game-->>Level: return
-    Level->>Level: Coin(), all_sprites.add(), coins.add()
+    Level->>Level: Create new Coin
+    Level-->>GameLoop: return
+    GameLoop->>Renderer: render()
 ```
 
-## Sekvenssikaavio hirviöön törmäämisestä
+
+
+### Hirviöön törmääminen
+
+Kun pelaaja törmää hirviöön:
+
 ```mermaid
 sequenceDiagram
-    actor Player
+    actor User
+    participant GameLoop
     participant Level
     participant Game
 
-    Player->>Level: update(keys_pressed)
+    User->>GameLoop: Press arrow key
+    GameLoop->>Level: update(keys_pressed)
+    Level->>Level: player.move(dx, dy)
     Level->>Level: _check_collisions()
     Level->>Game: hit_monster()
     Game->>Game: lives -= 1
     Game-->>Level: return
-    Level->>Level: monster.kill()
-    Level->>Level: Monster(), all_sprites.add(), monsters.add()
+    Level->>Level: Remove monster, create new one
+    Level-->>GameLoop: return
+```
+
+
+
+### Pelin tilanvaihto
+
+Pelaaja voi siirtyä eri pelitilaan painamalla näppäimiä:
+
+```mermaid
+sequenceDiagram
+    actor User
+    participant GameLoop
+    participant Level
+    participant Game
+
+    User->>GameLoop: Press key (ENTER, S, ESCAPE, Q)
+    GameLoop->>GameLoop: _handle_keydown(event)
+    GameLoop->>Level: reset() / change state
+    Level->>Game: Update game state
+    Game-->>Level: return
+    Level-->>GameLoop: return
 ```

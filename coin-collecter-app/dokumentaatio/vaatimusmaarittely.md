@@ -14,7 +14,6 @@ Pelin tavoitteena on kerätä kolikoita ja välttää hirviöitä. Pelaaja saa p
 - Graafisten tehosteiden ja animaatioiden lisääminen:
   - [x] You win/Game over tekstien vilkkuminen
   - [ ] HP-sydämet näkyvissä hienommin vain "lives left" tekstin sijaan
-  - [ ] Etusivulle uusia fontteja
 - [ ] Näytöllä olevien nappien painaminen näppäimen painamisen sijaan
 - [x] Pelaaja ei kuole yhdestä törmäyksestä
 

@@ -20,3 +20,9 @@
 - Testattu, että kolmen elämän loppuessa score ja elämät resetoituvat, kun pelin aloittaa uudelleen
 - Käyttäjä voi kerätä eri arvoisia kolikoita
 - Käyttäjä ei kuole yhdestä hirviöön törmäyksestä (voi seurata elämiään)
+
+## Viikko 6
+- Lisätty tuki tietokannalle (`score_repository.py`) ja sille testit (`test_score_repository.py`)
+- Käyttäjä voi tarkastella viimeisimpiä tuloksiaan scoreboardista
+- Lisätty visuaalisia tehosteita ja lisätekstejä käyttäjälle
+- Tehty docstring-dokumentaatiota, käyttöohje ja tarkempi arkkitehtuurikuvaus

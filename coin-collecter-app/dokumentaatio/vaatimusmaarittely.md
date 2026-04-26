@@ -12,7 +12,6 @@ Pelin tavoitteena on kerätä kolikoita ja välttää hirviöitä. Pelaaja saa p
 - [x] Pelin voittaminen: 20 kolikkoa kerätty, niin pelaaja voittaa
 - [x] Eri pistearvot kolikoille
 - [x] You win/Game over tekstien vilkkuminen
-- [ ] HP-sydämet näkyvissä hienommin vain "lives left" tekstin sijaan
 - [ ] Näytöllä olevien nappien painaminen näppäimen painamisen sijaan
 - [x] Pelaaja ei kuole yhdestä törmäyksestä
 
@@ -26,6 +25,7 @@ Pelin tavoitteena on kerätä kolikoita ja välttää hirviöitä. Pelaaja saa p
 - [x] Game Over -näkymä - pelaaja häviää
 - [x] You Win -näkymä - pelaaja voittaa
 - [x] Ohje takaisin menuun pelin päättyessä
+- [ ] HP-sydämet näkyvissä hienommin vain "lives left" tekstin sijaan
 - [x] Play again/Restart game-toiminto, kun peli päättyy
 - [x] Esc-näppäin avaa valikon, jossa resume ja quit
 

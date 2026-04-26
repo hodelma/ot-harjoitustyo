@@ -16,7 +16,7 @@ Pakkaus *ui* sisältää käyttöliittymästä eli pelisilmukasta ja piirtämise
 
 ## Sovelluslogiikka
 
-Sovelluksen loogisen tietomallin muodostavat luokat `Game`, `Level` ja pelutujen luokat (`Player`, `Coin`, `Monster`), jotka kuvaavat pelin tilaa ja objekteja.
+Sovelluksen loogisen tietomallin muodostavat luokat `Game`, `Level` ja peliobjektien luokat (`Player`, `Coin`, `Monster`), jotka mallintavat pelin tilaa ja objekteja.
 
 Toiminnallisista kokonaisuuksista vastaa pääosin `Level`-luokan olio, joka hallinnoi kaikkia peliobjekteja ja pelilogiikkaa. `Game`-luokka pitää yllä pelitilaa, jossa on esim. pistemäärä ja elämät. Luokka tarjoaa metodeja pelilogiikan toiminnoille:
 

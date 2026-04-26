@@ -11,12 +11,16 @@ Pelin tavoitteena on kerätä kolikoita ja välttää hirviöitä. Pelaaja saa p
 - [x] Hirviöön osuminen johtaa pisteiden nollaamiseen ja pelin päättymiseen
 - [x] Pelin voittaminen: 20 kolikkoa kerätty, niin pelaaja voittaa
 - [x] Eri pistearvot kolikoille
-- [ ] Graafisten tehosteiden ja animaatioiden lisääminen
+- Graafisten tehosteiden ja animaatioiden lisääminen:
+  - [x] You win/Game over tekstien vilkkuminen
+  - [ ] HP-sydämet näkyvissä hienommin vain "lives left" tekstin sijaan
+  - [ ] Etusivulle uusia fontteja
+- [ ] Näytöllä olevien nappien painaminen näppäimen painamisen sijaan
 - [x] Pelaaja ei kuole yhdestä törmäyksestä
 
 ### Etusivu / valikko
 - [x] Start-toiminto aloittaa pelin
-- [ ] Scoreboard-toiminto näyttää pelaajan pisteet eri pelikerroilta
+- [x] Scoreboard-toiminto näyttää pelaajan pisteet eri pelikerroilta
 - [ ] Vaikeustasot (Easy/Medium/Hard) tai levelit (hirviöiden nopeus/liikesuunta)
 - [x] Quit-toiminto sulkee pelin
 

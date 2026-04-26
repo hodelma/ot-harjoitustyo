@@ -3,6 +3,8 @@ import pygame
 
 dirname = os.path.dirname(__file__)
 
+PLAYER_SPEED = 5
+
 
 class Player(pygame.sprite.Sprite):
     """The playable character that the user controls.
@@ -24,7 +26,7 @@ class Player(pygame.sprite.Sprite):
         self.rect.x = x
         self.rect.y = y
 
-        self.speed = 5
+        self.speed = PLAYER_SPEED
 
     def move(self, dx, dy):
         """Move the player by the given deltas.

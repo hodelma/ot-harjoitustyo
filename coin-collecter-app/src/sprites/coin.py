@@ -5,6 +5,8 @@ from utils.utils import set_position
 
 dirname = os.path.dirname(__file__)
 
+COIN_SPEED = 2
+
 
 class Coin(pygame.sprite.Sprite):
     """A collectible coin sprite that falls from the top of the screen.
@@ -26,7 +28,7 @@ class Coin(pygame.sprite.Sprite):
         self.value = value
         self.image = pygame.image.load(os.path.join(dirname, "..", "assets", image_file))
         self.rect = self.image.get_rect()
-        self.speed = 2
+        self.speed = COIN_SPEED
 
         set_position(self.rect, x, y, (-1250 // 2, 0))
 

@@ -5,6 +5,8 @@ from utils.utils import set_position
 
 dirname = os.path.dirname(__file__)
 
+MONSTER_SPEED = 3
+
 
 class Monster(pygame.sprite.Sprite):
     """An enemy sprite that falls from the sky.
@@ -23,7 +25,7 @@ class Monster(pygame.sprite.Sprite):
 
         self.image = pygame.image.load(os.path.join(dirname, "..", "assets", "monster.png"))
         self.rect = self.image.get_rect()
-        self.speed = 3
+        self.speed = MONSTER_SPEED
 
         set_position(self.rect, x, y, (-700 // 2, -self.rect.height))
 

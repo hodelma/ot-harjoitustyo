@@ -5,8 +5,18 @@ dirname = os.path.dirname(__file__)
 
 
 class Player(pygame.sprite.Sprite):
-    """the playable character that the user can play with"""
+    """The playable character that the user controls.
+
+    Attributes:
+        speed: The movement speed in pixels per frame.
+    """
     def __init__(self, x, y):
+        """Initialize a new Player sprite.
+
+        Args:
+            x: Initial horizontal position in pixels.
+            y: Initial vertical position in pixels.
+        """
         super().__init__()
 
         self.image = pygame.image.load(os.path.join(dirname, "..", "assets", "player.png"))
@@ -17,11 +27,21 @@ class Player(pygame.sprite.Sprite):
         self.speed = 5
 
     def move(self, dx, dy):
-        """moves the player by dx and dy pixels"""
+        """Move the player by the given deltas.
+
+        Args:
+            dx: Change in horizontal position (pixels).
+            dy: Change in vertical position (pixels).
+        """
         self.rect.x += dx
         self.rect.y += dy
 
     def reset_position(self, x, y):
-        """resets player to its initial position"""
+        """Reset player to the specified position.
+
+        Args:
+            x: New horizontal position in pixels.
+            y: New vertical position in pixels.
+        """
         self.rect.x = x
         self.rect.y = y

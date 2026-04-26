@@ -6,7 +6,7 @@
 
 Alla näkyy koodin suurpiirteinen pakkausrakenne:
 
-![Pakkauskaavio](kuvat/pakkauskaavio.png)
+<img src="kuvat/pakkauskaavio.png" width="280">
 
 
 Pakkaus *ui* sisältää käyttöliittymästä eli pelisilmukasta ja piirtämisestä, *repositories* tietojen pysyväistallennuksesta, *sprites* ja *db* tietokannan hallinnasta vastaavan koodin. *game_logic.py* sisältää pelilogiikan ja *level.py* pelin tason objektit sekä törmäystarkistukset.

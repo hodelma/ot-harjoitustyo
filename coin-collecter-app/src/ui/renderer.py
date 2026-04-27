@@ -68,7 +68,7 @@ class Renderer:
         self._display.blit(info, info.get_rect(center=(625, 210)))
 
     def _draw_menu_buttons(self, mouse_position):
-        btn_font = pygame.font.Font(None, 42)
+        button_font = pygame.font.Font(None, 42)
         start_rect = pygame.Rect(0, 0, 260, 54)
         start_rect.center = (625, 300)
         score_rect = pygame.Rect(0, 0, 260, 54)
@@ -76,14 +76,14 @@ class Renderer:
         quit_rect = pygame.Rect(0, 0, 260, 54)
         quit_rect.center = (625, 460)
 
-        draw_button(self._display, "Start", btn_font, start_rect,
+        draw_button(self._display, "Start", button_font, start_rect,
                     color=(0, 100, 0), text_color=(0, 255, 0),
                     hover=start_rect.collidepoint(mouse_position))
 
-        draw_button(self._display, "Scoreboard", btn_font, score_rect,
+        draw_button(self._display, "Scoreboard", button_font, score_rect,
                     hover=score_rect.collidepoint(mouse_position))
 
-        draw_button(self._display, "Quit", btn_font, quit_rect,
+        draw_button(self._display, "Quit", button_font, quit_rect,
                     color=(100, 0, 0), text_color=(255, 80, 80),
                     hover=quit_rect.collidepoint(mouse_position))
 
@@ -92,16 +92,16 @@ class Renderer:
         self.button_rects["quit"] = quit_rect
 
     def _draw_pause_menu(self, mouse_position):
-        btn_font = pygame.font.Font(None, 42)
+        button_font = pygame.font.Font(None, 42)
         resume_rect = pygame.Rect(0, 0, 240, 54)
         resume_rect.center = (625, 260)
         menu_rect = pygame.Rect(0, 0, 240, 54)
         menu_rect.center = (625, 330)
 
-        draw_button(self._display, "Resume", btn_font, resume_rect,
+        draw_button(self._display, "Resume", button_font, resume_rect,
                     color=(0, 80, 0), hover=resume_rect.collidepoint(mouse_position))
 
-        draw_button(self._display, "Back to menu", btn_font, menu_rect,
+        draw_button(self._display, "Back to menu", button_font, menu_rect,
                     color=(80, 0, 0), hover=menu_rect.collidepoint(mouse_position))
 
         self.button_rects["resume"] = resume_rect
@@ -113,7 +113,7 @@ class Renderer:
 
     def _draw_game_over_result(self):
         font = pygame.font.Font(None, 50)
-        btn_font = pygame.font.Font(None, 36)
+        button_font = pygame.font.Font(None, 36)
 
         if self._game.won:
             result_text = "YOU WIN!"
@@ -130,24 +130,24 @@ class Renderer:
         result_image = font.render(result_text, True, blink_color)
         self._display.blit(result_image, result_image.get_rect(center=(600, 200)))
 
-        score_image = btn_font.render(f"Final score: {self._game.score}", True, (255, 255, 255))
+        score_image = button_font.render(f"Final score: {self._game.score}", True, (255, 255, 255))
         self._display.blit(score_image, score_image.get_rect(center=(600, 260)))
 
     def _draw_game_over_buttons(self, mouse_position):
-        btn_font = pygame.font.Font(None, 36)
-        r_rect = pygame.Rect(0, 0, 220, 48)
-        r_rect.center = (600, 320)
-        m_rect = pygame.Rect(0, 0, 280, 48)
-        m_rect.center = (600, 385)
+        button_font = pygame.font.Font(None, 36)
+        restart_rect = pygame.Rect(0, 0, 220, 48)
+        restart_rect.center = (600, 320)
+        menu_rect = pygame.Rect(0, 0, 280, 48)
+        menu_rect.center = (600, 385)
 
-        draw_button(self._display, "Play again", btn_font, r_rect,
-                    hover=r_rect.collidepoint(mouse_position))
+        draw_button(self._display, "Play again", button_font, restart_rect,
+                    hover=restart_rect.collidepoint(mouse_position))
 
-        draw_button(self._display, "Main menu", btn_font, m_rect,
-                    hover=m_rect.collidepoint(mouse_position))
+        draw_button(self._display, "Main menu", button_font, menu_rect,
+                    hover=menu_rect.collidepoint(mouse_position))
 
-        self.button_rects["restart"] = r_rect
-        self.button_rects["menu"] = m_rect
+        self.button_rects["restart"] = restart_rect
+        self.button_rects["menu"] = menu_rect
 
     def _draw_scoreboard(self, mouse_position):
         self._draw_scoreboard_content()
@@ -172,10 +172,10 @@ class Renderer:
             self._display.blit(line, (520, 250 + i * 36))
 
     def _draw_scoreboard_buttons(self, mouse_position):
-        btn_font = pygame.font.Font(None, 36)
+        button_font = pygame.font.Font(None, 36)
         back_rect = pygame.Rect(0, 0, 180, 48)
         back_rect.center = (625, 630)
 
-        draw_button(self._display, "Back", btn_font, back_rect,
+        draw_button(self._display, "Back", button_font, back_rect,
                     hover=back_rect.collidepoint(mouse_position))
         self.button_rects["back"] = back_rect

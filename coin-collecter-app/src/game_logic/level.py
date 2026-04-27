@@ -21,7 +21,6 @@ class Level:
         """Initializes the level with a player, coins and monsters."""
         score_repository = get_score_repository()
         self.game = Game(score_repository)
-        self._undefeatable_until = 0
 
         self.all_sprites = pygame.sprite.Group()
         self.coins = pygame.sprite.Group()
@@ -81,7 +80,11 @@ class Level:
         self.player.rect.y = max(0, min(self.player.rect.y, 700 - self.player.rect.height))
 
     def _check_collisions(self):
-        """Checks and handles collisions between the player, coins and monsters."""
+        """Checks and handles collisions between the player, coins and monsters.
+
+        Collecting a coin replaces it with a new randomly generated coin.
+        Hitting a monster costs a life and the monster is replaced with a new one.
+        """
         coins_hit = pygame.sprite.spritecollide(
             self.player, self.coins, True, pygame.sprite.collide_rect_ratio(0.7))
 
@@ -92,20 +95,16 @@ class Level:
             self.all_sprites.add(new_coin)
             self.coins.add(new_coin)
 
-        right_now = pygame.time.get_ticks()
-        if right_now >= self._undefeatable_until:
-            monsters_hit = pygame.sprite.spritecollide(
-                self.player, self.monsters, False, pygame.sprite.collide_rect_ratio(0.8))
+        monsters_hit = pygame.sprite.spritecollide(
+            self.player, self.monsters, False, pygame.sprite.collide_rect_ratio(0.8))
 
-            if monsters_hit:
-                self.game.hit_monster()
-                self._undefeatable_until = right_now + 2000
-
-                for monster in monsters_hit:
-                    monster.kill()
-                    new_monster = Monster()
-                    self.all_sprites.add(new_monster)
-                    self.monsters.add(new_monster)
+        if monsters_hit:
+            self.game.hit_monster()
+            for monster in monsters_hit:
+                monster.kill()
+                new_monster = Monster()
+                self.all_sprites.add(new_monster)
+                self.monsters.add(new_monster)
 
     def reset(self):
         """Resets the level to its initial state."""

@@ -16,17 +16,17 @@ Pelin tavoitteena on kerätä kolikoita ja välttää hirviöitä. Pelaaja saa p
 - [x] Pelaaja ei kuole yhdestä törmäyksestä
 
 ### Etusivu / valikko
-- [x] Start-toiminto aloittaa pelin
-- [x] Scoreboard-toiminto näyttää pelaajan pisteet eri pelikerroilta
+- [x] Start-nappi aloittaa pelin
+- [x] Scoreboard-nappi näyttää pelaajan pisteet eri pelikerroilta
 - [ ] Vaikeustasot (Easy/Medium/Hard) tai levelit (hirviöiden nopeus/liikesuunta)
-- [x] Quit-toiminto sulkee pelin
+- [x] Quit game-nappi sulkee pelin
 
 ### Peli-ikkuna
 - [x] Game Over -näkymä - pelaaja häviää
 - [x] You Win -näkymä - pelaaja voittaa
 - [x] Ohje takaisin menuun pelin päättyessä
 - [ ] HP-sydämet näkyvissä hienommin vain "lives left" tekstin sijaan
-- [x] Play again/Restart game-toiminto, kun peli päättyy
+- [x] Play again/Restart game-nappi, kun peli päättyy
 - [x] Esc-näppäin avaa valikon, jossa resume ja quit
 
 ## Jatkokehitysideoita

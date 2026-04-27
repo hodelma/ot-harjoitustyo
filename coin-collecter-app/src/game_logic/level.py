@@ -7,8 +7,18 @@ from repositories.score_repository import get_score_repository
 
 
 class Level:
-    """Manages all game objects and handles collisions"""
+    """Manages all game objects and handles collisions.
+
+    Attributes:
+        game: The Game object tracking score, lives and game state.
+        all_sprites: Group containing all sprites in the level.
+        coins: Group containing all coin sprites.
+        monsters: Group containing all monster sprites.
+        player: The player sprite.
+    """
+
     def __init__(self):
+        """Initializes the level with a player, coins and monsters."""
         score_repository = get_score_repository()
         self.game = Game(score_repository)
         self._undefeatable_until = 0
@@ -32,7 +42,11 @@ class Level:
             self.monsters.add(monster)
 
     def update(self, keys_pressed):
-        """Updates game state"""
+        """Updates game state based on player input and checks collisions.
+
+        Args:
+            keys_pressed: A pygame key state dict from pygame.key.get_pressed().
+        """
         if self.game.state != "playing":
             return
 
@@ -62,15 +76,14 @@ class Level:
         self._check_collisions()
 
     def _check_boundaries(self):
-        """Keeps player within screen bounds"""
+        """Keeps player within screen bounds."""
         self.player.rect.x = max(0, min(self.player.rect.x, 1250 - self.player.rect.width))
         self.player.rect.y = max(0, min(self.player.rect.y, 700 - self.player.rect.height))
 
     def _check_collisions(self):
-        """Checks collisions with coins and monsters"""
+        """Checks and handles collisions between the player, coins and monsters."""
         coins_hit = pygame.sprite.spritecollide(
-            self.player, self.coins, True, pygame.sprite.collide_rect_ratio(0.7)
-            )
+            self.player, self.coins, True, pygame.sprite.collide_rect_ratio(0.7))
 
         for coin in coins_hit:
             self.game.collect_coin(coin.value)
@@ -95,7 +108,7 @@ class Level:
                     self.monsters.add(new_monster)
 
     def reset(self):
-        """Resets the level"""
+        """Resets the level to its initial state."""
         self.game.reset()
         self.player.reset_position(1250 // 2, 700 // 2)
 

@@ -9,7 +9,11 @@ from db.initialize_database import initialize_database
 
 
 def main():
-    """initializes and starts the game"""
+    """Initializes and starts the game.
+
+    Sets up the pygame display, initializes the database, creates all
+    game objects needed and starts the main game loop.
+    """
     pygame.init()
     initialize_database()
 

@@ -12,7 +12,7 @@ Pelin tavoitteena on kerätä kolikoita ja välttää hirviöitä. Pelaaja saa p
 - [x] Pelin voittaminen: 20 kolikkoa kerätty, niin pelaaja voittaa
 - [x] Eri pistearvot kolikoille
 - [x] You win/Game over tekstien vilkkuminen
-- [ ] Näytöllä olevien nappien painaminen näppäimen painamisen sijaan
+- [x] Näytöllä olevien nappien painaminen näppäimen painamisen sijaan
 - [x] Pelaaja ei kuole yhdestä törmäyksestä
 
 ### Etusivu / valikko

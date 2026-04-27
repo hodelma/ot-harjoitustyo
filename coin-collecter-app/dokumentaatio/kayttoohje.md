@@ -2,7 +2,7 @@
 
 ## Etusivu
 
-Kun sovelluksen käynnistää, se aukeaa etusivulle, jossa on kolme toimintoa: 
+Kun sovelluksen käynnistää, se aukeaa etusivulle, jossa on kolme nappia: 
 
 - Start
 - Scoreboard
@@ -12,7 +12,7 @@ Kun sovelluksen käynnistää, se aukeaa etusivulle, jossa on kolme toimintoa:
 <img src="kuvat/etusivu.png" width="600">
 </p>
 
-Pelin aloittaminen onnistuu painamalla "ENTER"-nappia. Tulostaulun tarkastelu tehdään painamalla "S"-nappia, ja sovelluksen sulkeminen tapahtuu "Q"-napista.
+Pelin aloittaminen onnistuu painamalla "Start"-nappia. Tulostaulun tarkastelu tehdään painamalla "Scoreboard"-nappia, ja sovelluksen sulkeminen tapahtuu "Quit game"-napista.
 
 ## Peli-ikkuna
 

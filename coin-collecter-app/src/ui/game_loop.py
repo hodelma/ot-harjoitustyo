@@ -10,7 +10,7 @@ class GameLoop:
         self._clock = clock
 
     def start(self):
-        """ starts the game loop"""
+        """starts the game loop"""
         game_is_running = True
 
         while game_is_running:
@@ -29,74 +29,51 @@ class GameLoop:
                 return False
 
             if event.type == pygame.KEYDOWN:
-                return self._handle_keydown(event)
+                self._handle_keydown(event)
 
+            if event.type == pygame.MOUSEBUTTONDOWN and event.button == 1:
+                if not self._handle_click(pygame.mouse.get_pos()):
+                    return False
         return True
 
     def _handle_keydown(self, event):
+        if event.key == pygame.K_ESCAPE:
+            if self._level.game.state == "playing":
+                self._level.game.state = "paused"
+
+            elif self._level.game.state == "paused":
+                self._level.game.state = "playing"
+
+    def _handle_click(self, pos):
         state = self._level.game.state
+        buttons = self._renderer.button_rects
 
         if state == "menu":
-            return self._menu_keydown(event)
+            if buttons.get("start") and buttons["start"].collidepoint(pos):
+                self._level.reset()
 
-        if state == "scoreboard":
-            return self._scoreboard_keydown(event)
+            elif buttons.get("scoreboard") and buttons["scoreboard"].collidepoint(pos):
+                self._level.game.state = "scoreboard"
 
-        if state == "paused":
-            return self._paused_keydown(event)
+            elif buttons.get("quit") and buttons["quit"].collidepoint(pos):
+                return False
 
-        if state == "playing":
-            return self._playing_keydown(event)
+        elif state == "scoreboard":
+            if buttons.get("back") and buttons["back"].collidepoint(pos):
+                self._level.game.state = "menu"
 
-        if state == "game_over":
-            return self._game_over_keydown(event)
+        elif state == "paused":
+            if buttons.get("resume") and buttons["resume"].collidepoint(pos):
+                self._level.game.state = "playing"
 
-        return True
+            elif buttons.get("menu") and buttons["menu"].collidepoint(pos):
+                self._level.game.state = "menu"
 
-    def _menu_keydown(self, event):
-        if event.key == pygame.K_RETURN:
-            self._level.reset()
-            return True
+        elif state == "game_over":
+            if buttons.get("restart") and buttons["restart"].collidepoint(pos):
+                self._level.reset()
 
-        if event.key == pygame.K_s:
-            self._level.game.state = "scoreboard"
-            return True
-
-        if event.key == pygame.K_q:
-            return False
-
-        return True
-
-    def _paused_keydown(self, event):
-        if event.key == pygame.K_q:
-            self._level.game.state = "menu"
-            return True
-
-        if event.key == pygame.K_ESCAPE:
-            self._level.game.state = "playing"
-            return True
-
-        return True
-
-    def _playing_keydown(self, event):
-        if event.key == pygame.K_ESCAPE:
-            self._level.game.state = "paused"
-            return True
-
-        return True
-    
-    def _scoreboard_keydown(self, event):
-        if event.key == pygame.K_ESCAPE:
-            self._level.game.state = "menu"
-        return True
-
-    def _game_over_keydown(self, event):
-        if event.key == pygame.K_r:
-            self._level.reset()
-            return True
-        
-        if event.key == pygame.K_SPACE:
-            self._level.game.state = "menu"
-            return True
+            elif buttons.get("menu") and buttons["menu"].collidepoint(pos):
+                self._level.game.state = "menu"
 
         return True

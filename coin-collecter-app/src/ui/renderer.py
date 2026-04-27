@@ -59,7 +59,8 @@ class Renderer:
         self._draw_menu_buttons(mouse_position)
 
     def _draw_menu_texts(self):
-        font_title = pygame.font.Font(None, 80)
+        font_title = pygame.font.Font(None, 100)
+        font_title.set_bold(True)
         font_info = pygame.font.Font(None, 40)
         title = font_title.render("COIN GAME", True, (255, 255, 0))
         info = font_info.render("Welcome to the Coin Game. Watch out for the monsters!", True, (255, 150, 0))

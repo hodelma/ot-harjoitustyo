@@ -38,4 +38,8 @@
 | 19.4. | 3 | Uusien pelitoimintojen ja logiikan luomista |
 | 20.4. | 2 | Testien tekoa uusille toiminnoille ja sekvenssikaavioiden tekoa |
 | 21.4. | 1 | Dokumentaation päivitystä ja releasen testaamista |
-| **Yhteensä** | 72 | |
+| 24.4. | 2 | Tietokantatuen valmistelua, koodin refaktorointia, testausta |
+| 25.4. | 3 | Lisätty kokonaan tietokantatuki ja visuaalisuutta |
+| 26.4. | 2 | Arkkitehtuurikuvauksen tekoa, käyttöohjetta, docstringit |
+| 27.4. | 2 | Dokumentaatiota, refaktorointia |
+| **Yhteensä** | 81 | |

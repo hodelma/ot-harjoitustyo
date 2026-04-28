@@ -27,7 +27,7 @@ Pelaaja voi pelata kolikkopeliä, jossa tavoitteena on kerätä kolikoita ja vä
 **1. Kloonaa repositorio:**
 ```bash
 git clone https://github.com/hodelma/ot-harjoitustyo.git
-cd coin-collecter-app
+cd ot-harjoitustyo/coin-collecter-app
 ```
 
 

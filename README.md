@@ -13,6 +13,7 @@ Pelaaja voi pelata kolikkopeliä, jossa tavoitteena on kerätä kolikoita ja vä
 
 ## Release
 [Viikon 5 release](https://github.com/hodelma/ot-harjoitustyo/releases/tag/viikko5)
+
 [Viikon 6 release](https://github.com/hodelma/ot-harjoitustyo/releases/tag/viikko6)
 
 <br>

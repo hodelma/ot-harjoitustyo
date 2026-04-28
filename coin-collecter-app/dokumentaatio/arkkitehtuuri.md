@@ -18,6 +18,8 @@ Pakkaus *ui* sisältää käyttöliittymästä eli pelisilmukasta ja piirtämise
 
 Sovelluksen loogisen tietomallin muodostavat luokat `Game`, `Level` ja peliobjektien luokat (`Player`, `Coin`, `Monster`), jotka mallintavat pelin tilaa ja objekteja.
 
+<img src="kuvat/class_diagram.png" width="590">
+
 Toiminnallisista kokonaisuuksista vastaa pääosin `Level`-luokan olio, joka hallinnoi kaikkia peliobjekteja ja pelilogiikkaa. `Game`-luokka pitää yllä pelitilaa, jossa on esim. pistemäärä ja elämät. Luokka tarjoaa metodeja pelilogiikan toiminnoille:
 
 - `collect_coin(value)` lisää pisteen saldoon kun kolikko kerätään

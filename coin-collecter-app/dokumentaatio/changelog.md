@@ -25,4 +25,4 @@
 - Lisätty tuki tietokannalle (`score_repository.py`) ja sille testit (`test_score_repository.py`)
 - Käyttäjä voi tarkastella viimeisimpiä tuloksiaan scoreboardista
 - Lisätty visuaalisia tehosteita ja lisätekstejä käyttäjälle
-- Tehty docstring-dokumentaatiota, käyttöohje ja tarkempi arkkitehtuurikuvaus
+- Tehty käyttöohje ja tarkempi arkkitehtuurikuvaus

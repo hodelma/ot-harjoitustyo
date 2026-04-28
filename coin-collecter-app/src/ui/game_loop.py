@@ -46,34 +46,45 @@ class GameLoop:
 
     def _handle_click(self, pos):
         state = self._level.game.state
+        handlers = {
+            "menu": self._click_menu,
+            "scoreboard": self._click_scoreboard,
+            "paused": self._click_paused,
+            "game_over": self._click_game_over,
+        }
+        handler = handlers.get(state)
+        if handler:
+            return handler(pos)
+        return True
+
+    def _click_menu(self, pos):
         buttons = self._renderer.button_rects
+        if buttons.get("start") and buttons["start"].collidepoint(pos):
+            self._level.reset()
+        elif buttons.get("scoreboard") and buttons["scoreboard"].collidepoint(pos):
+            self._level.game.state = "scoreboard"
+        elif buttons.get("quit") and buttons["quit"].collidepoint(pos):
+            return False
+        return True
 
-        if state == "menu":
-            if buttons.get("start") and buttons["start"].collidepoint(pos):
-                self._level.reset()
+    def _click_scoreboard(self, pos):
+        buttons = self._renderer.button_rects
+        if buttons.get("back") and buttons["back"].collidepoint(pos):
+            self._level.game.state = "menu"
+        return True
 
-            elif buttons.get("scoreboard") and buttons["scoreboard"].collidepoint(pos):
-                self._level.game.state = "scoreboard"
+    def _click_paused(self, pos):
+        buttons = self._renderer.button_rects
+        if buttons.get("resume") and buttons["resume"].collidepoint(pos):
+            self._level.game.state = "playing"
+        elif buttons.get("menu") and buttons["menu"].collidepoint(pos):
+            self._level.game.state = "menu"
+        return True
 
-            elif buttons.get("quit") and buttons["quit"].collidepoint(pos):
-                return False
-
-        elif state == "scoreboard":
-            if buttons.get("back") and buttons["back"].collidepoint(pos):
-                self._level.game.state = "menu"
-
-        elif state == "paused":
-            if buttons.get("resume") and buttons["resume"].collidepoint(pos):
-                self._level.game.state = "playing"
-
-            elif buttons.get("menu") and buttons["menu"].collidepoint(pos):
-                self._level.game.state = "menu"
-
-        elif state == "game_over":
-            if buttons.get("restart") and buttons["restart"].collidepoint(pos):
-                self._level.reset()
-
-            elif buttons.get("menu") and buttons["menu"].collidepoint(pos):
-                self._level.game.state = "menu"
-
+    def _click_game_over(self, pos):
+        buttons = self._renderer.button_rects
+        if buttons.get("restart") and buttons["restart"].collidepoint(pos):
+            self._level.reset()
+        elif buttons.get("menu") and buttons["menu"].collidepoint(pos):
+            self._level.game.state = "menu"
         return True

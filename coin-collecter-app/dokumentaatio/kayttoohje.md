@@ -20,4 +20,4 @@ Pelin aloittaminen onnistuu painamalla "Start"-nappia. Tulostaulun tarkastelu te
 <img src="kuvat/game_window.png" width="600">
 </p>
 
-Kun peli alkaa, pelihahmon liikkumista voi säädellä näppäimistön nuolinäppäimillä. "Esc"-nappia painamalla pääsee pause-menuun, jossa voi joko jatkaa peliä tai sitten lopettaa pelin, jolloin päätyy takaisin etusivulle. Ikkunan vasemmasta yläreunasta voi seurata elämien ja pisteiden määrää.
+Kun peli alkaa, pelihahmon liikkumista voi säädellä sekä vaaka että pystysuunnassa näppäimistön nuolinäppäimillä. "Esc"-nappia painamalla pääsee pause-menuun, jossa voi joko jatkaa peliä tai sitten lopettaa pelin, jolloin päätyy takaisin etusivulle. Ikkunan vasemmasta yläreunasta voi seurata elämien ja pisteiden määrää.

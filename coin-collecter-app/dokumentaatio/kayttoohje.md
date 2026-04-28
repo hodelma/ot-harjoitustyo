@@ -21,3 +21,6 @@ Pelin aloittaminen onnistuu painamalla "Start"-nappia. Tulostaulun tarkastelu te
 </p>
 
 Kun peli alkaa, pelihahmon liikkumista voi säädellä sekä vaaka että pystysuunnassa näppäimistön nuolinäppäimillä. "Esc"-nappia painamalla pääsee pause-menuun, jossa voi joko jatkaa peliä tai sitten lopettaa pelin, jolloin päätyy takaisin etusivulle. Ikkunan vasemmasta yläreunasta voi seurata elämien ja pisteiden määrää.
+
+- Pelin voittaa, kun kerää vähintään 20 kolikkoa.
+- Pelin häviää, jos osuu hirviöön kolme kertaa ja elämäpisteet loppuvat.

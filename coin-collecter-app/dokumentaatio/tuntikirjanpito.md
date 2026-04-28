@@ -42,4 +42,5 @@
 | 25.4. | 3 | Lisätty kokonaan tietokantatuki ja visuaalisuutta |
 | 26.4. | 2 | Arkkitehtuurikuvauksen tekoa, käyttöohjetta, docstringit |
 | 27.4. | 2 | Dokumentaatiota, refaktorointia |
-| **Yhteensä** | 81 | |
+| 28.4. | 1 | Dokumentaatio + refaktorointi |
+| **Yhteensä** | 82 | |

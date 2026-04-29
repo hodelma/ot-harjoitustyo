@@ -12,7 +12,7 @@ def create_tables(connection):
     """creates the db tables"""
     cursor = connection.cursor()
     cursor.execute("""
-        create table scores (
+        create table if not exists scores (
             id integer primary key autoincrement,
             score integer not null
         );
@@ -23,7 +23,6 @@ def create_tables(connection):
 def initialize_database():
     """initializes the db tables"""
     connection = get_database_connection()
-    drop_tables(connection)
     create_tables(connection)
 
 

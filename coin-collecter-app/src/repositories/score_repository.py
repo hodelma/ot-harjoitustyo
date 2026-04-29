@@ -23,7 +23,7 @@ class ScoreRepository:
         """
         cursor = self._connection.cursor()
         cursor.execute(
-            "insert into scores (score) values (?);",(score,))
+            "INSERT INTO scores (score) VALUES (?);",(score,))
         self._connection.commit()
 
     def get_high_score(self):
@@ -34,7 +34,7 @@ class ScoreRepository:
         """
         cursor = self._connection.cursor()
         result = cursor.execute(
-            "select max(score) as high_score from scores;").fetchone()
+            "SELECT MAX(score) AS high_score FROM scores;").fetchone()
         return result["high_score"] or 0
 
     def get_recent_scores(self, limit=10):
@@ -48,12 +48,12 @@ class ScoreRepository:
         """
         cursor = self._connection.cursor()
         rows = cursor.execute(
-            "select score from scores order by id desc limit ?;", (limit,)).fetchall()
+            "SELECT score FROM scores ORDER BY id DESC LIMIT ?;", (limit,)).fetchall()
         return rows
 
     def delete_all(self):
         cursor = self._connection.cursor()
-        cursor.execute("delete from scores;")
+        cursor.execute("DELETE FROM scores;")
         self._connection.commit()
 
 

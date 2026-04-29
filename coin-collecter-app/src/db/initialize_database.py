@@ -4,7 +4,7 @@ from .database_connection import get_database_connection
 def drop_tables(connection):
     """deletes the tables"""
     cursor = connection.cursor()
-    cursor.execute("drop table if exists scores;")
+    cursor.execute("DROP TABLE IF EXISTS scores;")
     connection.commit()
 
 
@@ -12,9 +12,9 @@ def create_tables(connection):
     """creates the db tables"""
     cursor = connection.cursor()
     cursor.execute("""
-        create table if not exists scores (
-            id integer primary key autoincrement,
-            score integer not null
+        CREATE TABLE IF NOT EXISTS scores (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            score INTEGER NOT NULL
         );
     """)
     connection.commit()

@@ -156,20 +156,23 @@ class Renderer:
     def _draw_scoreboard_content(self):
         font_title = pygame.font.Font(None, 56)
         font = pygame.font.Font(None, 36)
+
+        center_x = self._display.get_width() // 2
+        
         title = font_title.render("SCOREBOARD", True, (255, 255, 0))
-        self._display.blit(title, title.get_rect(center=(625, 80)))
+        self._display.blit(title, title.get_rect(center=(center_x, 80)))
 
         high_score = self._score_repository.get_high_score()
         high_score_text = font.render(f"High Score: {high_score}", True, (0, 255, 0))
-        self._display.blit(high_score_text, (520, 160))
+        self._display.blit(high_score_text, high_score_text.get_rect(center=(center_x, 160)))
 
-        recent_games_text = font.render("Recent games:", True, (200, 200, 200))
-        self._display.blit(recent_games_text, (520, 210))
+        recent_games_text = font.render("Your recent games:", True, (200, 200, 200))
+        self._display.blit(recent_games_text, recent_games_text.get_rect(center=(center_x, 210)))
 
         scores = self._score_repository.get_recent_scores(10)
         for i, score_row in enumerate(scores):
             line = font.render(f"{i + 1}.  {score_row['score']} points", True, (255, 255, 255))
-            self._display.blit(line, (520, 250 + i * 36))
+            self._display.blit(line, line.get_rect(center=(center_x, 250 + i * 36)))
 
     def _draw_scoreboard_buttons(self, mouse_position):
         button_font = pygame.font.Font(None, 36)

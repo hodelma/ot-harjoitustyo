@@ -1,3 +1,4 @@
+import os
 import pygame
 
 
@@ -17,6 +18,11 @@ class Renderer:
         self._game = game
         self._score_repository = score_repository
         self.button_rects = {}
+
+        assets_dir = os.path.join(os.path.dirname(__file__), "..", "assets")
+        heart_path = os.path.join(assets_dir, "health.png")
+        raw_heart = pygame.image.load(heart_path).convert_alpha()
+        self._heart_image = pygame.transform.scale(raw_heart, (45, 45))
 
     def render(self):
         """draws all sprites and update display"""
@@ -50,9 +56,9 @@ class Renderer:
         score_image = font.render(score_text, True, (255, 255, 255))
         self._display.blit(score_image, (10, 10))
 
-        lives_text = f"Lives left: {self._game.lives}"
-        lives_image = font.render(lives_text, True, (255, 100, 100))
-        self._display.blit(lives_image, (10, 45))
+        heart_width = self._heart_image.get_width()
+        for i in range(self._game.lives):
+            self._display.blit(self._heart_image, (10 + i * (heart_width + 6), 45))
 
     def _draw_menu(self, mouse_position):
         self._draw_menu_texts()

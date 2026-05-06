@@ -8,6 +8,8 @@ Ohjelmaa on testattu automatisoiduilla yksikkö- ja integraatiotesteillä unitte
 
 ### Repositorio-luokat
 
+Tietokantaoperaatioista vastaavaa repositorio-luokkaa `ScoreRepository` testataan `TestScoreRepository`-testiluokalla.
+
 ### Testauskattavuus
 
 ## Järjestelmätestaus

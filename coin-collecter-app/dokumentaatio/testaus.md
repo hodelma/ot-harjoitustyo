@@ -16,6 +16,12 @@ Sovelluksen järjestelmätestaus on suoritettu manuaalisesti.
 
 ### Asennus ja konfigurointi
 
+Sovellus on haettu ja sitä on testattu README.md tiedoston ja käyttöohjeen kuvaamalla tavalla sekä Linux-ympäristöön että yliopiston Cubbli Linux-virtuaalikoneella.
+
 ### Toiminnallisuudet
 
+Kaikki määrittelydokumentissa ja käyttöohjeessa kerrotut toiminnallisuudet on käyty läpi manuaalisesti. Yllättäviä ongelmia tai bugeja ei ilmennyt testauksessa.
+
 ## Sovellukseen jääneet laatuongelmat
+
+Kun käyttäjä testaa sovellusta, `test-database.db`-testitiedosto jää lojumaan repositorioon eikä poistu automaattisesti testauksen päättyessä.

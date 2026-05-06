@@ -103,12 +103,14 @@ classDiagram
       +str state
       +int high_score
       +int lives
+      -ScoreRepository _score_repository
       +collect_coin(value)
       +hit_monster()
       +has_won()
       +reset()
+      -_save_score()
     }
-
+ 
     class Level {
       +Game game
       +Player player
@@ -120,54 +122,75 @@ classDiagram
       -_check_boundaries()
       -_check_collisions()
     }
-
+ 
     class Player {
       +int speed
       +move(dx, dy)
       +reset_position(x, y)
     }
-
+ 
     class Coin {
-      +int speed
       +int value
+      +int speed
       +update()
       +randomize_position()
     }
-
+ 
     class Monster {
       +int speed
       +update()
       +reset_position()
     }
-
+ 
     class GameLoop {
       +start()
       -_handle_events()
       -_handle_keydown(event)
+      -_handle_click(pos)
+      -_click_menu(pos)
+      -_click_scoreboard(pos)
+      -_click_paused(pos)
+      -_click_game_over(pos)
     }
-
+ 
     class Renderer {
+      +dict button_rects
       +render()
+      -_render_ui(mouse_position)
+      -_draw_score()
+      -_draw_menu(mouse_position)
+      -_draw_pause_menu(mouse_position)
+      -_draw_game_over(mouse_position)
+      -_draw_scoreboard(mouse_position)
     }
-
+ 
+    class Clock {
+      +tick(fps)
+      +get_ticks()
+    }
+ 
     class EventQueue {
       +get()
     }
-
+ 
     class ScoreRepository {
       +save_score(score)
       +get_high_score()
       +get_recent_scores(limit)
+      +delete_all()
     }
-
+ 
     Level --> Game
+    Level --> ScoreRepository
     Level --> Player
-    Level "1" o-- "many" Coin : coins
-    Level "1" o-- "many" Monster : monsters
+    Level "1" o-- Coin : coins
+    Level "1" o-- Monster : monsters
     GameLoop --> Level
     GameLoop --> Renderer
     GameLoop --> EventQueue
+    GameLoop --> Clock
     Renderer --> Game
+    Renderer --> ScoreRepository
     Game --> ScoreRepository
 ```
 
@@ -190,18 +213,24 @@ sequenceDiagram
     participant Level
     participant Game
     participant ScoreRepository
+    participant Renderer
 
-    User->>GameLoop: Press arrow key
-    GameLoop->>Level: update(keys_pressed)
-    Level->>Level: player.move(dx, dy)
-    Level->>Level: _check_collisions()
-    Level->>Game: collect_coin(coin.value)
-    Game->>Game: score += value
-    Game->>ScoreRepository: Potentially save score
-    Game-->>Level: return
-    Level->>Level: Create new Coin
-    Level-->>GameLoop: return
-    GameLoop->>Renderer: render()
+    User ->> GameLoop: 
+    GameLoop ->> Level: update(keys_pressed)
+
+    Level ->> Level: player.move(dx, dy)
+    Level ->> Level: _check_collisions()
+
+    Level ->> Game: collect_coin(coin.value)
+    Game ->> Game: score += value
+    Game ->> Game: high_score = max(high_score, score)
+
+    Game -->> Level: return
+
+    Level ->> Level: roll_coin()
+    Level -->> GameLoop: return
+
+    GameLoop ->> Renderer: render()
 ```
 
 
@@ -216,23 +245,25 @@ sequenceDiagram
     participant GameLoop
     participant Level
     participant Game
-
-    User->>GameLoop: Press arrow key
+    participant ScoreRepository
+ 
+    User->>GameLoop:
     GameLoop->>Level: update(keys_pressed)
     Level->>Level: player.move(dx, dy)
     Level->>Level: _check_collisions()
     Level->>Game: hit_monster()
     Game->>Game: lives -= 1
     Game-->>Level: return
-    Level->>Level: Remove monster, create new one
+    Level->>Level: monster.kill()
     Level-->>GameLoop: return
+    GameLoop->>Renderer: render()
 ```
 
 
 
 ### Pelin tilanvaihto
 
-Pelaaja voi siirtyä eri pelitilaan painamalla näppäimiä:
+Pelaaja voi siirtyä eri pelitilaan painamalla "Start"-nappia:
 
 ```mermaid
 sequenceDiagram
@@ -240,11 +271,17 @@ sequenceDiagram
     participant GameLoop
     participant Level
     participant Game
-
-    User->>GameLoop: Press key (ENTER, S, ESCAPE, Q)
-    GameLoop->>GameLoop: _handle_keydown(event)
-    GameLoop->>Level: reset() / change state
-    Level->>Game: Update game state
+ 
+    User->>GameLoop:
+    GameLoop->>GameLoop: _handle_click(pos)
+    GameLoop->>GameLoop: _click_menu(pos)
+    GameLoop->>Level: reset()
+    Level->>Game: reset()
+    Game->>Game: state = "playing", score = 0, lives = 3
     Game-->>Level: return
+    Level->>Level: player.reset_position()
+    Level->>Level: roll_coin()
+    Level->>Level: monster.reset_position()
     Level-->>GameLoop: return
+    GameLoop->>Renderer: render()
 ```

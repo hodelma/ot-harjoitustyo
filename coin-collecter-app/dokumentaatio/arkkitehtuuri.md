@@ -49,7 +49,7 @@ Pelitilan muutokset tapahtuvat Game-olion state-attribuutin kautta. Mahdolliset 
 
 `repositories`-pakkauksen `ScoreRepository`-luokka huolehtii tietojen tallentamisesta SQLite-tietokantaan. Luokka noudattaa repositorio-suunnittelumallia, joka eristää tietokantatoiminnot muusta sovelluslogiikasta.
 
-Pisteet tallennetaan scores-tauluun.
+Pisteet tallennetaan `scores`-tauluun.
 
 
 

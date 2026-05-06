@@ -41,7 +41,7 @@ poetry install
 >[!TIP]
 >Jos haluat määritellä itse SQLite-tietokantatiedoston nimen, toimi seuraavasti:
 >
->Mene projektin juureen tiedostoon .env
+>Mene projektin juureen tiedostoon `.env`
 >
 >Muokkaa haluamasi tiedostonimi riville ```DATABASE_FILENAME=OMA_TIEDOSTO_NIMI.db```
 
@@ -76,7 +76,7 @@ Coverage raportti generoituu *htmlcov*-hakemistoon
 
 
 ### Pylint
-Tiedostossa .pylintrc määriteltyjen tarkistusten suoritus:
+Tiedostossa `.pylintrc` määriteltyjen tarkistusten suoritus:
 ```bash
 poetry run invoke lint
 ```

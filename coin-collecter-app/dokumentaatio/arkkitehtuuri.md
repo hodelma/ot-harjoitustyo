@@ -8,8 +8,63 @@ Alla näkyy koodin suurpiirteinen pakkausrakenne:
 
 <img src="kuvat/pakkauskaavio.png" width="420">
 
-
 Pakkaus *ui* sisältää käyttöliittymästä eli pelisilmukasta ja piirtämisestä, *repositories* tietojen pysyväistallennuksesta, *sprites* ja *db* tietokannan hallinnasta vastaavan koodin. *game_logic.py* sisältää pelilogiikan ja *level.py* pelin tason objektit sekä törmäystarkistukset.
+
+
+
+
+
+
+
+
+
+
+
+## Käyttöliittymä
+
+Käyttöliittymä koostuu neljästä eri näkymästä:
+
+- Päävalikko
+- Pelinäkymä
+- Taukovalikko
+- Pelin lopetus
+- Tulostaulu
+
+Jokainen näkymä on toteutettu `Renderer`-luokassa omana piirtometodina (`_draw_menu`, `_draw_scoreboard`, `_draw_pause_menu`, `_draw_game_over`). Käyttöliittymä ei vastaa sovelluslogiikasta, vaan ainoastaan nykyisen tilan piirtämisestä.
+
+`Renderer` pitää kirjaa sen hetkisistä napin sijainneista, jota `GameLoop` hyödyntää hiiren klikkauksien käsittelyssä.
+<br>
+
+Pelitilan muutokset tapahtuvat Game-olion state-attribuutin kautta. Mahdolliset tilat ovat "menu", "playing", "paused", "game_over" ja "scoreboard".
+
+
+
+
+
+
+
+
+
+## Tietojen pysyväistallennus
+
+`repositories`-pakkauksen `ScoreRepository`-luokka huolehtii tietojen tallentamisesta SQLite-tietokantaan. Luokka noudattaa repositorio-suunnittelumallia, joka eristää tietokantatoiminnot muusta sovelluslogiikasta.
+
+Pisteet tallennetaan scores-tauluun.
+
+
+
+
+
+
+
+## Tiedostot ja konfiguraatio
+
+Tietokantatiedoston nimi haetaan `.env`-tiedostosta ympäristömuuttujalla `DATABASE_FILENAME`. Mikäli muuttujaa ei ole asetettu, käytetään oletusarvona `database.db`. Testejä varten on erillinen `.env.test`-tiedosto, joka ohjaa testit omaan testitietokantaansa. Tietokantayhteys luodaan `db/database_connection.py`-moduulissa ja sen konfiguraatio sijaitsee `db/config.py`-tiedostossa. Tietokantataulut alustetaan `db/initialize_database.py`-moduulin `initialize_database()`-funktiolla, jota kutsutaan ohjelman käynnistyksen yhteydessä `main.py`:ssä.
+
+
+
+
+
 
 
 
@@ -27,6 +82,12 @@ Toiminnallisista kokonaisuuksista vastaa pääosin `Level`-luokan olio, joka hal
 - `has_won()` tarkistaa voittoehdot
 
 `Level`-luokka hallinnoi `all_sprites`, `coins`, `monsters` ja päivittää pelaajan liikettä, tarkistaa törmäykset ja hallinnoi peliobjektien luomista ja poistamista.
+
+
+
+
+
+
 
 
 
@@ -109,6 +170,10 @@ classDiagram
     Renderer --> Game
     Game --> ScoreRepository
 ```
+
+
+
+
 
 
 

@@ -3,9 +3,9 @@ import random
 import pygame
 from utils.utils import set_position
 
-dirname = os.path.dirname(__file__)
-
 COIN_SPEED = 2
+
+dirname = os.path.dirname(__file__)
 
 
 class Coin(pygame.sprite.Sprite):

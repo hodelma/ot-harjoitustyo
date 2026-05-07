@@ -6,6 +6,10 @@ Ohjelmaa on testattu automatisoiduilla yksikkö- ja integraatiotesteillä unitte
 
 ### Sovelluslogiikka
 
+`Game`-luokan toimintaa testataan `TestGame`-testiluokalla. `Game`-olio alustetaan testejä varten ilman pysyvää tietokantayhteyttä, jolloin `_save_score()`-kutsu käyttää testitietokantaa.
+
+`Level`-luokan integraatiota testataan `TestLevel`-testiluokalla.
+
 ### Repositorio-luokat
 
 Tietokantaoperaatioista vastaavaa repositorio-luokkaa `ScoreRepository` testataan `TestScoreRepository`-testiluokalla.

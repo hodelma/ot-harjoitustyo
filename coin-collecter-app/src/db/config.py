@@ -11,7 +11,7 @@ except FileNotFoundError:
 DATABASE_FILENAME = os.getenv("DATABASE_FILENAME") or "database.db"
 
 if DATABASE_FILENAME == ":memory:":
-    DATABASE_FILEPATH = ":memory:"
+    DATABASE_FILE_PATH = ":memory:"
 
 else:
-    DATABASE_FILEPATH = os.path.join(dirname, "..", "..", DATABASE_FILENAME)
+    DATABASE_FILE_PATH = os.path.join(dirname, "..", "..", DATABASE_FILENAME)

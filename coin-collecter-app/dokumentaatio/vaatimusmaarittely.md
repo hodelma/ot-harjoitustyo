@@ -20,13 +20,13 @@ Pelin tavoitteena on kerätä kolikoita ja välttää hirviöitä. Pelaaja saa p
 - [x] Quit game-nappi sulkee pelin
 
 ### Peli-ikkuna
-- [x] Game Over -näkymä - pelaaja häviää
-- [x] You Win -näkymä - pelaaja voittaa
-- [x] Ohje takaisin menuun pelin päättyessä
+- [x] Game Over -näkymä
+- [x] You Win -näkymä
+- [x] Nappi takaisin menuun pelin päättyessä
 - [x] HP-sydämet näkyvissä hienommin vain "lives left" tekstin sijaan
 - [x] Play again/Restart game-nappi, kun peli päättyy
 - [x] You win/Game over tekstien vilkkuminen
-- [x] Esc-näppäin avaa valikon, jossa resume ja quit
+- [x] Esc-näppäin avaa valikon, jossa "Resume" ja "Quit" napit
 
 ## Jatkokehitysideoita
 - [ ] Ajastettu peli

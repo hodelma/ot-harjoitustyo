@@ -17,7 +17,6 @@ Pelin tavoitteena on kerätä kolikoita ja välttää hirviöitä. Pelaaja saa p
 ### Etusivu / valikko
 - [x] Start-nappi aloittaa pelin
 - [x] Scoreboard-nappi näyttää pelaajan pisteet eri pelikerroilta
-- [ ] Vaikeustasot (Easy/Medium/Hard) tai levelit (hirviöiden nopeus/liikesuunta)
 - [x] Quit game-nappi sulkee pelin
 
 ### Peli-ikkuna
@@ -32,6 +31,7 @@ Pelin tavoitteena on kerätä kolikoita ja välttää hirviöitä. Pelaaja saa p
 ## Jatkokehitysideoita
 - [ ] Ajastettu peli
 - [ ] Boss-hirviöhahmo
+- [ ] Vaikeustasot (Easy/Medium/Hard) tai levelit (hirviöiden nopeus/liikesuunta)
 - [ ] Eri hirviötyypit
 - [ ] Useita teemakenttiä
 - [ ] Hirviöiden lisäksi esteitä pelikentällä

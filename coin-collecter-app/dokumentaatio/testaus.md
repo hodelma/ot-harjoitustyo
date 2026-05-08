@@ -16,6 +16,12 @@ Tietokantaoperaatioista vastaavaa repositorio-luokkaa `ScoreRepository` testataa
 
 ### Testauskattavuus
 
+Testauksessa ei ole otettu huomioon käyttöliittymää. Sovelluksen testikattavuus on 86%.
+
+<p align="center">
+<img src="kuvat/testikattavuus.png" width="600">
+</p>
+
 ## Järjestelmätestaus
 
 Sovelluksen järjestelmätestaus on suoritettu manuaalisesti.

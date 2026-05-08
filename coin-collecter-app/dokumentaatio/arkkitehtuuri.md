@@ -206,6 +206,8 @@ classDiagram
 
 ### Kolikon kerääminen
 
+Pelaaja osuu kolikkoon. `GameLoop` kutsuu `Level`-olion `update()`-metodia, joka ensin siirtää pelaajaa painettujen näppäinten mukaan ja tarkistaa sitten törmäykset. Törmäyksen havaitessaan `Level` kutsuu `Game`-olion `collect_coin()`-metodia, joka kasvattaa pistesaldoa ja päivittää mahd. ennätyksen. Sitten `Level` arpoo kolikolle uuden sijainnin `(roll_coin())`.
+
 ```mermaid
 sequenceDiagram
     actor User
@@ -237,7 +239,7 @@ sequenceDiagram
 
 ### Hirviöön törmääminen
 
-Kun pelaaja törmää hirviöön:
+Pelaaja törmää hirviöön. `GameLoop` kutsuu `Level`-olion `update()`-metodia, joka siirtää pelaajaa ja tarkistaa törmäykset. Törmäyksen havaitessaan `Level` kutsuu `Game`-olion `hit_monster()`-metodia, joka vähentää pelaajan elämäpisteitä yhdellä.
 
 ```mermaid
 sequenceDiagram
@@ -263,7 +265,7 @@ sequenceDiagram
 
 ### Pelin tilanvaihto
 
-Pelaaja voi siirtyä eri pelitilaan painamalla "Start"-nappia:
+Pelaaja painaa päävalikossa "Start"-nappia. `GameLoop` käsittelee hiiren klikkauksen ja tunnistaa sen. Sitten `GameLoop` kutsuu `Level`-olion `reset()`-metodia, joka ketjuttaa kutsun `Game`-olion `reset()`-metodille.
 
 ```mermaid
 sequenceDiagram

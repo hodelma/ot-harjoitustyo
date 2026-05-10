@@ -24,7 +24,7 @@ Testauksessa ei ole otettu huomioon käyttöliittymää. Sovelluksen testikattav
 
 ## Järjestelmätestaus
 
-Sovelluksen järjestelmätestaus on suoritettu manuaalisesti.
+Sovelluksen järjestelmätestaus tehty manuaalisesti.
 
 ### Asennus ja konfigurointi
 

@@ -8,13 +8,17 @@ Käyttäjä voi vapaasti muokata tietokannan nimeä haluamakseen `.env` tiedosto
 
 ## Sovelluksen käynnistäminen
 
-Ihan ensin asenna projektin riippuvuudet:
+Ihan ensin navigoi tänne:
+```bash
+cd ot-harjoitustyo/coin-collecter-app
+```
 
+Sitten asenna projektin riippuvuudet:
 ```bash
 poetry install
 ```
 
-Sitten suorita alustustoimenpiteet (tietokanta myös alustetaan automaattisesti sovelluksen käynnistyessä jos käyttäjä unohtaa tehdä tämän vaiheen):
+Suorita alustustoimenpiteet (tietokanta myös alustetaan automaattisesti sovelluksen käynnistyessä jos käyttäjä unohtaa tehdä tämän vaiheen):
 ```bash
 poetry run invoke build
 ```

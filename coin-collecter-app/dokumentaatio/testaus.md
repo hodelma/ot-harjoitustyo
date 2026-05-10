@@ -6,13 +6,13 @@ Ohjelmaa on testattu automatisoiduilla yksikkö- ja integraatiotesteillä unitte
 
 ### Sovelluslogiikka
 
-`Game`-luokan toimintaa testataan `TestGame`-testiluokalla. `Game`-olio alustetaan testejä varten ilman pysyvää tietokantayhteyttä, jolloin `_save_score()`-kutsu käyttää testitietokantaa.
+`Game` luokan toimintaa testataan `TestGame` testiluokalla. `Game` olio alustetaan testejä varten ilman pysyvää tietokantayhteyttä, jolloin `_save_score()` kutsu käyttää testitietokantaa.
 
-`Level`-luokan integraatiota testataan `TestLevel`-testiluokalla.
+`Level` luokan integraatiota testataan `TestLevel` testiluokalla.
 
 ### Repositorio-luokat
 
-Tietokantaoperaatioista vastaavaa repositorio-luokkaa `ScoreRepository` testataan `TestScoreRepository`-testiluokalla.
+Tietokantaoperaatioista vastaavaa repositorio-luokkaa `ScoreRepository` testataan `TestScoreRepository` testiluokalla.
 
 ### Testauskattavuus
 
@@ -28,7 +28,7 @@ Sovelluksen järjestelmätestaus tehty manuaalisesti.
 
 ### Asennus ja konfigurointi
 
-Sovellus on haettu ja sitä on testattu README.md tiedoston ja käyttöohjeen kuvaamalla tavalla sekä Linux-ympäristöön että yliopiston Cubbli Linux-virtuaalikoneella. Sovellusta on myös testattu tilanteessa, jossa käyttäjä unohtaisi tehdä alustustoimenpiteet komennolla `poetry run invoke build`. Tällöin `database.db`-tietokanta luodaan aina automaattisesti.
+Sovellus on haettu ja sitä on testattu README.md tiedoston ja käyttöohjeen kuvaamalla tavalla sekä Linux-ympäristöön että yliopiston Cubbli Linux-virtuaalikoneella. Sovellusta on myös testattu tilanteessa, jossa käyttäjä unohtaisi tehdä alustustoimenpiteet komennolla `poetry run invoke build`. Tällöin `database.db` tietokanta luodaan aina automaattisesti.
 
 ### Toiminnallisuudet
 

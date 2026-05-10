@@ -43,4 +43,10 @@
 | 26.4. | 2 | Arkkitehtuurikuvauksen tekoa, käyttöohjetta, docstringit |
 | 27.4. | 2 | Dokumentaatiota, refaktorointia |
 | 28.4. | 1 | Dokumentaatio + refaktorointi |
-| **Yhteensä** | 82 | |
+| 29.4. | 1 | Tietokannan korjailua ja koodin parantelua |
+| 5.5. | 1 | UI parantelua |
+| 6.5. | 3 | Dokumentaatiota ja arkkitehtuurin päivittelyä |
+| 7.5. | 2 | Dokumentaatio + refaktorointi |
+| 8.5. | 2 | Dokumentaation viimeistelyä |
+| 10.5. | 3 | Sovelluksen viimeiset checkit ja testaukset + dokumentaatio |
+| **Yhteensä** | 94 | |

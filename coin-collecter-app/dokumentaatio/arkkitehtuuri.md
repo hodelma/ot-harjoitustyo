@@ -47,7 +47,7 @@ Pelitilan muutokset tapahtuvat Game-olion state-attribuutin kautta. Mahdolliset 
 
 ## Tietojen pysyväistallennus
 
-`repositories`-pakkauksen `ScoreRepository`-luokka huolehtii tietojen tallentamisesta SQLite-tietokantaan. Luokka noudattaa repositorio-suunnittelumallia, joka eristää tietokantatoiminnot muusta sovelluslogiikasta.
+`repositories`-pakkauksen `ScoreRepository`-luokka huolehtii tietojen tallentamisesta SQLite-tietokantaan. Luokka noudattaa repositorio-suunnittelumallia.
 
 Pisteet tallennetaan `scores`-tauluun.
 
@@ -59,7 +59,7 @@ Pisteet tallennetaan `scores`-tauluun.
 
 ## Tiedostot ja konfiguraatio
 
-Tietokantatiedoston nimi haetaan `.env`-tiedostosta ympäristömuuttujalla `DATABASE_FILENAME`. Mikäli muuttujaa ei ole asetettu, käytetään oletusarvona `database.db`. Testejä varten on erillinen `.env.test`-tiedosto, joka ohjaa testit omaan testitietokantaansa. Tietokantayhteys luodaan `db/database_connection.py`-moduulissa ja sen konfiguraatio sijaitsee `db/config.py`-tiedostossa. Tietokantataulut alustetaan `db/initialize_database.py`-moduulin `initialize_database()`-funktiolla, jota kutsutaan ohjelman käynnistyksen yhteydessä `main.py`:ssä.
+Tietokantatiedoston nimi haetaan `.env`-tiedostosta ympäristömuuttujalla `DATABASE_FILENAME`. Jos muuttujaa ei ole asetettu, käytetään oletusarvona `database.db`. Testejä varten on erillinen `.env.test`-tiedosto, joka ohjaa testit omaan testitietokantaansa. Tietokantayhteys luodaan `db/database_connection.py`-moduulissa ja sen konfiguraatio sijaitsee `db/config.py`-tiedostossa. Tietokantataulut alustetaan `db/initialize_database.py`-moduulin `initialize_database()`-funktiolla, jota kutsutaan ohjelman käynnistyksen yhteydessä `main.py`:ssä.
 
 
 
@@ -75,7 +75,7 @@ Sovelluksen loogisen tietomallin muodostavat luokat `Game`, `Level` ja peliobjek
 
 <img src="kuvat/class_diagram.png" width="590">
 
-Toiminnallisista kokonaisuuksista vastaa pääosin `Level`-luokan olio, joka hallinnoi kaikkia peliobjekteja ja pelilogiikkaa. `Game`-luokka pitää yllä pelitilaa, jossa on esim. pistemäärä ja elämät. Luokka tarjoaa metodeja pelilogiikan toiminnoille:
+Toiminnallisista kokonaisuuksista vastaa pääosin `Level`-luokan olio, joka hallinnoi kaikkia peliobjekteja ja pelilogiikkaa. `Game`-luokka pitää yllä pelitilaa, jossa on esim pistemäärä ja elämät. Luokalla on pelilogiikan toimintoja:
 
 - `collect_coin(value)` lisää pisteen saldoon kun kolikko kerätään
 - `hit_monster()` vähentää elämiä kun hirviö osuu pelaajaan
@@ -206,7 +206,7 @@ classDiagram
 
 ### Kolikon kerääminen
 
-Pelaaja osuu kolikkoon. `GameLoop` kutsuu `Level`-olion `update()`-metodia, joka ensin siirtää pelaajaa painettujen näppäinten mukaan ja tarkistaa sitten törmäykset. Törmäyksen havaitessaan `Level` kutsuu `Game`-olion `collect_coin()`-metodia, joka kasvattaa pistesaldoa ja päivittää mahd. ennätyksen. Sitten `Level` arpoo kolikolle uuden sijainnin `(roll_coin())`.
+Pelaaja osuu kolikkoon. `GameLoop` kutsuu `Level`-olion `update()`, joka ensin siirtää pelaajaa painettujen näppäinten mukaan ja tarkistaa sitten törmäykset. Törmäyksen havaitessaan `Level` kutsuu `Game`-olion `collect_coin()`, joka kasvattaa pistesaldoa ja päivittää mahd. ennätyksen. Sitten `Level` arpoo kolikolle uuden sijainnin `(roll_coin())`.
 
 ```mermaid
 sequenceDiagram
@@ -239,7 +239,7 @@ sequenceDiagram
 
 ### Hirviöön törmääminen
 
-Pelaaja törmää hirviöön. `GameLoop` kutsuu `Level`-olion `update()`-metodia, joka siirtää pelaajaa ja tarkistaa törmäykset. Törmäyksen havaitessaan `Level` kutsuu `Game`-olion `hit_monster()`-metodia, joka vähentää pelaajan elämäpisteitä yhdellä.
+Pelaaja törmää hirviöön. `GameLoop` kutsuu `Level`-olion `update()`, joka siirtää pelaajaa ja tarkistaa törmäykset. Törmäyksen havaitessaan `Level` kutsuu `Game` olion `hit_monster()`, joka vähentää pelaajan elämäpisteitä yhdellä.
 
 ```mermaid
 sequenceDiagram

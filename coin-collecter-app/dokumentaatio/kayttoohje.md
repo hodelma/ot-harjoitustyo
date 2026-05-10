@@ -1,5 +1,29 @@
 # Käyttöohje
 
+Viimeisimmän version lataaminen projektista onnistuu navigoimalla uusimpaan releaseen ja lataamalla sen lähdekoodi. 
+
+## Sovelluksen konfigurointi
+
+Käyttäjä voi vapaasti muokata tietokannan nimeä haluamakseen `.env` tiedostossa. Tiedostossa on yksi rivi `DATABASE_FILENAME=database.db`, jossa tuon = jälkeen tulevan "database" voi muuttaa minkä vaan nimiseksi.
+
+## Sovelluksen käynnistäminen
+
+Ihan ensin asenna projektin riippuvuudet:
+
+```bash
+poetry install
+```
+
+Sitten suorita alustustoimenpiteet (tietokanta myös alustetaan automaattisesti sovelluksen käynnistyessä jos käyttäjä unohtaa tehdä tämän vaiheen):
+```bash
+poetry run invoke build
+```
+
+Nyt sovellus käynnistyy komennolla:
+```bash
+poetry run invoke start
+```
+
 ## Etusivu
 
 Kun sovelluksen käynnistää, se aukeaa etusivulle, jossa on kolme nappia: 

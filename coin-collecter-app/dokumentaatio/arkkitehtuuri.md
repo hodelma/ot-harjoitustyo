@@ -59,7 +59,7 @@ Pisteet tallennetaan `scores`-tauluun.
 
 ### Tiedostot ja konfiguraatio
 
-Tietokantatiedoston nimi haetaan `.env`-tiedostosta ympäristömuuttujalla `DATABASE_FILENAME`. Jos muuttujaa ei ole asetettu, käytetään oletusarvona `database.db`. Testejä varten on erillinen `.env.test`-tiedosto, joka ohjaa testit omaan testitietokantaansa. Tietokantayhteys luodaan `db/database_connection.py`-moduulissa ja sen konfiguraatio sijaitsee `db/config.py`-tiedostossa. Tietokantataulut alustetaan `db/initialize_database.py` moduulin `initialize_database()` funktiolla, jota kutsutaan ohjelman käynnistyksen yhteydessä `main.py`ssä.
+Tietokantatiedoston nimi haetaan `.env`-tiedostosta ympäristömuuttujalla `DATABASE_FILENAME`. Jos muuttujaa ei ole asetettu, käytetään oletusarvona `database.db`. Testejä varten on erillinen `.env.test`-tiedosto. Tietokantayhteys luodaan `db/database_connection.py`-moduulissa ja sen konfiguraatio sijaitsee `db/config.py`-tiedostossa. Tietokantataulut alustetaan `db/initialize_database.py` moduulin `initialize_database()` funktiolla, jota kutsutaan ohjelman käynnistyksen yhteydessä `main.py`ssä.
 
 
 

@@ -33,3 +33,7 @@ Sovellus on haettu ja sitä on testattu README.md tiedoston ja käyttöohjeen ku
 ### Toiminnallisuudet
 
 Kaikki määrittelydokumentissa ja käyttöohjeessa kerrotut toiminnallisuudet on käyty läpi manuaalisesti. Yllättäviä ongelmia tai bugeja ei ilmennyt testauksessa.
+
+### Laatuongelmat
+
+Sovellukseen jää yksi laatuongelma eli Pylintin `inconsistent-return-statements` varoitus.

@@ -8,11 +8,11 @@ Pelin tavoitteena on kerätä kolikoita ja välttää hirviöitä. Pelaaja saa p
 ### Perusversion ydintoiminnallisuus
 - [x] Pelaajan hahmon liikkuminen ruudulla
 - [x] Kolikoiden kerääminen kasvattaa pistesaldoa
-- [x] Hirviöön osuminen johtaa pisteiden nollaamiseen ja pelin päättymiseen
-- [x] Pelin voittaminen: 20 kolikkoa kerätty, niin pelaaja voittaa
+- [x] Hirviöön osuminen johtaa pelin päättymiseen
+- [x] 20 kolikkoa kerätty, niin pelaaja voittaa
 - [x] Eri pistearvot kolikoille
 - [x] Näytöllä olevat napit
-- [x] Pelaaja ei kuole yhdestä törmäyksestä
+- [x] Pelaajalla kolme elämää
 
 ### Etusivu / valikko
 - [x] Start-nappi aloittaa pelin

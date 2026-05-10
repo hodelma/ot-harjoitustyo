@@ -48,3 +48,11 @@ Kun peli alkaa, pelihahmon liikkumista voi säädellä sekä vaaka että pystysu
 
 - Pelin voittaa, kun kerää vähintään 20 kolikkoa.
 - Pelin häviää, jos osuu hirviöön kolme kertaa ja elämäpisteet loppuvat.
+
+## Scoreboard-ikkuna
+
+<p align="center">
+<img src="kuvat/scoreboard.png" width="600">
+</p>
+
+Kun käyttäjä on pelannut pelejä, omia tuloksiaan voi tarkastella scoreboard näkymästä navigoimalla etusivulle ja painamalla "Scoreboard"-nappia. Tässä näkyy myös pelattujen kertojen parhain pistemäärä yläosassa.
